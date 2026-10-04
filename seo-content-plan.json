@@ -1,0 +1,2373 @@
+{
+  "plan": {
+    "project": "WordsCompare",
+    "phase": 3,
+    "prepared": "2026-10-03",
+    "scope": "Planning only. Do not edit application source as part of this plan.",
+    "inputs": [
+      "SEO-AUDIT.md",
+      "seo-inventory.json",
+      "SEO-RESEARCH.md",
+      "seo-keyword-research.json",
+      "current PHP source"
+    ],
+    "research_limitations": [
+      "Google SERP fetch was challenged by a JavaScript interstitial.",
+      "Brave returned HTTP 429.",
+      "Bing RSS was inconsistent and only usable for selected queries.",
+      "No Search Console, Bing Webmaster, DataForSEO, volume, CPC, difficulty, trend or live analytics data was available; no numeric demand is inferred."
+    ],
+    "counts": {
+      "tool_views": 108,
+      "registered_tool_slugs": 49,
+      "unregistered_tool_slugs": 59,
+      "category_routes": 9,
+      "guide_routes": 15,
+      "homepage_and_info_legal_routes": 5,
+      "primary_html_templates": 137,
+      "text_comparison_aliases": 10,
+      "routed_html_urls": 147,
+      "status_counts_for_routed_html": {
+        "IMPLEMENT": 10,
+        "REVIEW": 126,
+        "SUPPORTING": 11,
+        "NOINDEX_REVIEW": 0
+      },
+      "separate_utility_error_resources_noindex_review": 8
+    },
+    "status_definitions": {
+      "IMPLEMENT": "Detailed content blueprint approved for a later implementation phase; not a claim that production work is already complete.",
+      "REVIEW": "Hold for technical, taxonomy, accuracy, YMYL, duplicate-intent or source verification before writing/publishing.",
+      "SUPPORTING": "Informational or navigation content that supports verified tool pages and site discovery.",
+      "NOINDEX_REVIEW": "Utility, API, diagnostic or error resource; review appropriate response/indexing treatment. No directive is implemented by this plan."
+    }
+  },
+  "tool_routes": {
+    "total": 108,
+    "all_current_slugs": [
+      "add-page-number-to-pdf",
+      "add-watermark-to-pdf",
+      "age-calculator",
+      "apy-calculator",
+      "base64-encoder",
+      "bmi-calculator",
+      "brokerage-calculator",
+      "cagr-calculator",
+      "calendar-generator",
+      "car-loan-emi-calculator",
+      "case-converter",
+      "color-picker",
+      "compound-interest-calculator",
+      "compress-pdf",
+      "csv-to-pdf",
+      "delete-pdf-pages",
+      "discount-calculator",
+      "dwg-to-pdf",
+      "emi-calculator",
+      "epf-calculator",
+      "epub-to-pdf",
+      "excel-to-pdf",
+      "fd-calculator",
+      "find-replace-text",
+      "flat-vs-reducing-rate-calculator",
+      "flatten-pdf",
+      "gst-calculator",
+      "hash-generator",
+      "home-equity-loan-calculator",
+      "home-loan-emi-calculator",
+      "hra-calculator",
+      "html-to-pdf",
+      "income-tax-calculator",
+      "investment-returns-calculator",
+      "ipynb-to-pdf",
+      "jfif-to-pdf",
+      "jpg-to-pdf",
+      "json-formatter",
+      "json-to-pdf",
+      "json-viewer",
+      "jwt-decoder",
+      "loan-eligibility-calculator",
+      "lock-pdf",
+      "margin-calculator",
+      "markdown-to-pdf",
+      "merge-pdf",
+      "mobi-to-pdf",
+      "mutual-fund-returns-calculator",
+      "nps-calculator",
+      "offer-letter-generator",
+      "password-generator",
+      "payroll-sheet-generator",
+      "pdf-editor",
+      "pdf-metadata-editor",
+      "pdf-to-audio",
+      "pdf-to-csv",
+      "pdf-to-epub",
+      "pdf-to-excel",
+      "pdf-to-html",
+      "pdf-to-ipynb",
+      "pdf-to-jfif",
+      "pdf-to-jpg",
+      "pdf-to-json",
+      "pdf-to-markdown",
+      "pdf-to-mobi",
+      "pdf-to-ocr",
+      "pdf-to-png",
+      "pdf-to-ppt",
+      "pdf-to-psd",
+      "pdf-to-text",
+      "pdf-to-webp",
+      "pdf-to-word",
+      "pdf-to-xml",
+      "percentage-calculator",
+      "personal-loan-calculator",
+      "pnr-to-pdf",
+      "ppf-calculator",
+      "ppt-to-pdf",
+      "pto-calculator",
+      "qr-code-generator",
+      "rd-calculator",
+      "refinance-calculator",
+      "remove-extra-spaces",
+      "reorder-pdf-pages",
+      "repair-pdf",
+      "retirement-calculator",
+      "reverse-text",
+      "rotate-pdf",
+      "rtf-to-pdf",
+      "salary-calculator",
+      "scientific-calculator",
+      "shreelipi-to-pdf",
+      "simple-calculator",
+      "sip-calculator",
+      "speech-to-pdf",
+      "split-pdf",
+      "sukanya-samriddhi-yojana-calculator",
+      "svg-to-pdf",
+      "tax-calculator",
+      "tds-calculator",
+      "text-comparison",
+      "text-to-pdf",
+      "text-to-slug",
+      "tiff-to-pdf",
+      "unit-converter",
+      "url-encoder",
+      "word-counter",
+      "word-to-pdf"
+    ],
+    "implement": [
+      {
+        "slug": "json-formatter",
+        "url": "/json-formatter",
+        "status": "IMPLEMENT",
+        "intent": "Format, minify or syntax-check pasted JSON.",
+        "primary_keyword": "JSON formatter online",
+        "related_queries": [
+          "format JSON",
+          "pretty print JSON",
+          "JSON beautifier",
+          "minify JSON",
+          "validate JSON syntax"
+        ],
+        "title": "JSON Formatter & Validator | WordsCompare",
+        "meta_description": "Format, minify and check JSON syntax. Choose two or four spaces or tabs, review parse errors, and copy the output for your next step.",
+        "h1": "JSON Formatter",
+        "intro_topic": "Pasted JSON in; formatted or minified JSON text out. Clarify syntax validation versus schema validation.",
+        "sections": [
+          "Format or minify JSON",
+          "Choose indentation",
+          "Check JSON syntax",
+          "Common parse errors",
+          "What this tool does not check"
+        ],
+        "steps": [
+          "Paste JSON",
+          "Choose 2 spaces, 4 spaces or tabs",
+          "Format, Minify or Validate",
+          "Review status/output",
+          "Copy or clear"
+        ],
+        "verified_features": [
+          "Client-side JSON.parse/JSON.stringify",
+          "Indentation selector",
+          "Format",
+          "Minify",
+          "Validate",
+          "Copy",
+          "Clear"
+        ],
+        "input": "Pasted text; no file picker shown.",
+        "output": "Formatted/minified JSON text and syntax status.",
+        "limitations": [
+          "No JSON Schema/business-rule validation",
+          "Runtime-check parser error detail"
+        ],
+        "example": "Format {\"name\":\"Ada\",\"active\":true} with selected indentation.",
+        "troubleshooting": [
+          "Check quoted keys and strings",
+          "Check commas and balanced braces",
+          "Comments/trailing-comma behavior follows native JSON parser and should be tested"
+        ],
+        "faq_topics": [
+          "Does it validate JSON Schema? No.",
+          "Can it minify JSON? Yes.",
+          "What indentation options are shown? 2 spaces, 4 spaces and tabs.",
+          "Can I upload a JSON file? No upload control is shown.",
+          "What happens with invalid JSON? A parse error is displayed."
+        ],
+        "internal_links": [
+          "/json-viewer",
+          "/text-comparison",
+          "/guides/format-json-online",
+          "/guides/validate-json"
+        ],
+        "schema": [
+          "WebPage",
+          "BreadcrumbList"
+        ],
+        "social": "Use proposed title/description and canonical; default assets/img/og-image.png is missing, so do not emit an invented image URL.",
+        "verification": {
+          "code_verified": [
+            "Visible input and controls",
+            "JSON parse/stringify flow"
+          ],
+          "needs_runtime_test": [
+            "Error-message detail and position",
+            "Output behavior across browsers"
+          ]
+        }
+      },
+      {
+        "slug": "text-comparison",
+        "url": "/text-comparison",
+        "status": "IMPLEMENT",
+        "intent": "Compare two pasted text values and review differences.",
+        "primary_keyword": "compare text online",
+        "related_queries": [
+          "text comparison tool",
+          "text diff tool",
+          "diff checker",
+          "compare two texts",
+          "compare text ignoring case or spaces"
+        ],
+        "title": "Text Comparison Tool: Compare Two Texts | WordsCompare",
+        "meta_description": "Paste two text versions, compare their differences, and use the available case and space options to review the result.",
+        "h1": "Text Comparison Tool",
+        "intro_topic": "Two text inputs, a compare action and a rendered diff; describe this as text comparison, not file or syntax-aware comparison.",
+        "sections": [
+          "Compare two text inputs",
+          "Read the difference view",
+          "Ignore case and spaces",
+          "Use for API response text",
+          "Limitations and false positives"
+        ],
+        "steps": [
+          "Paste original and modified text",
+          "Choose Ignore case and/or Ignore spaces",
+          "Compare",
+          "Review differences and navigation"
+        ],
+        "verified_features": [
+          "Two text areas",
+          "Compare",
+          "Switch",
+          "Clear",
+          "Ignore-case/space controls",
+          "Difference table and navigation controls"
+        ],
+        "input": "Two pasted plain-text strings; no upload control.",
+        "output": "Rendered differences.",
+        "limitations": [
+          "No file picker",
+          "No verified JSON/XML/HTML/CSS-aware comparison",
+          "No verified syntax highlighting"
+        ],
+        "example": "Compare two short sentences with one changed word; JSON may be compared only as text after formatting.",
+        "troubleshooting": [
+          "Test exact line and whitespace semantics",
+          "Do not imply structured parsing"
+        ],
+        "faq_topics": [
+          "How do I compare two texts?",
+          "Can I ignore case or spaces?",
+          "Can I compare JSON? Only as text; no structural mode is evidenced.",
+          "Can I upload files? No file picker is present."
+        ],
+        "internal_links": [
+          "/json-formatter",
+          "/json-viewer",
+          "/word-counter",
+          "/case-converter",
+          "/guides/compare-api-responses"
+        ],
+        "canonical_policy": "Single canonical content page; aliases are separate REVIEW decisions.",
+        "schema": [
+          "WebPage",
+          "BreadcrumbList"
+        ],
+        "social": "One canonical card; approved image required.",
+        "verification": {
+          "code_verified": [
+            "Visible controls",
+            "Alias routes resolve to shared page"
+          ],
+          "needs_runtime_test": [
+            "Diff algorithm",
+            "Whitespace semantics",
+            "Line boundaries"
+          ]
+        }
+      },
+      {
+        "slug": "base64-encoder",
+        "url": "/base64-encoder",
+        "status": "IMPLEMENT",
+        "intent": "Encode pasted text to Base64 or decode Base64 text.",
+        "primary_keyword": "Base64 encoder and decoder online",
+        "related_queries": [
+          "encode text to Base64",
+          "decode Base64 string",
+          "Base64 to text",
+          "is Base64 encryption"
+        ],
+        "title": "Base64 Encoder & Decoder | WordsCompare",
+        "meta_description": "Encode pasted text to Base64 or decode a Base64 string. Review the output, copy it, and learn why encoding is not encryption.",
+        "h1": "Base64 Encoder / Decoder",
+        "intro_topic": "Text encoding and decoding; prominently distinguish reversible encoding from encryption.",
+        "sections": [
+          "Encode text",
+          "Decode Base64 text",
+          "Text encoding details",
+          "Base64 is not encryption",
+          "Invalid input"
+        ],
+        "steps": [
+          "Paste text or encoded text",
+          "Choose Encode or Decode",
+          "Inspect output",
+          "Copy or clear"
+        ],
+        "verified_features": [
+          "Text input/output",
+          "UTF-8 wrappers",
+          "Encode/Decode",
+          "Copy",
+          "Clear"
+        ],
+        "input": "Text only; no file upload shown.",
+        "output": "Base64 or decoded text.",
+        "limitations": [
+          "Not encryption",
+          "Binary file conversion not shown",
+          "Base64URL and Unicode edge cases need verification"
+        ],
+        "example": "Man -> TWFu -> Man.",
+        "troubleshooting": [
+          "Check valid Base64 alphabet and padding",
+          "Do not imply Base64URL support without test"
+        ],
+        "faq_topics": [
+          "Is Base64 encryption? No.",
+          "Can I encode/decode text? Yes.",
+          "Can I upload a file? No file control is present.",
+          "Why can decoding fail? Input must be valid for the current decoder.",
+          "Does it support Base64URL? Not established."
+        ],
+        "internal_links": [
+          "/jwt-decoder",
+          "/url-encoder",
+          "/guides/base64-vs-encryption",
+          "/guides/decode-jwt-token"
+        ],
+        "schema": [
+          "WebPage",
+          "BreadcrumbList"
+        ],
+        "social": "Use approved image only; avoid privacy/security assurances.",
+        "verification": {
+          "code_verified": [
+            "Textareas",
+            "btoa/atob flow"
+          ],
+          "needs_runtime_test": [
+            "Base64URL",
+            "Unicode edge cases",
+            "Clipboard behavior"
+          ]
+        }
+      },
+      {
+        "slug": "url-encoder",
+        "url": "/url-encoder",
+        "status": "IMPLEMENT",
+        "intent": "Encode/decode an entered string as a URI component.",
+        "primary_keyword": "URL encoder decoder online",
+        "related_queries": [
+          "URL encode online",
+          "percent encode a string",
+          "decode percent-encoded text"
+        ],
+        "title": "URL Encoder & Decoder | WordsCompare",
+        "meta_description": "Encode a text value for use in a URL component or decode percent-encoded text. See the result and copy it for your request.",
+        "h1": "URL Encoder / Decoder",
+        "intro_topic": "Explain URI-component operations, not whole-URL parsing or validation.",
+        "sections": [
+          "Encode text",
+          "Decode percent-encoded text",
+          "Reserved characters",
+          "Malformed encoding errors",
+          "URI component vs complete URL"
+        ],
+        "steps": [
+          "Enter a string",
+          "Choose Encode or Decode",
+          "Inspect result/error",
+          "Copy or clear"
+        ],
+        "verified_features": [
+          "Text input/output",
+          "encodeURIComponent",
+          "decodeURIComponent",
+          "Error handling",
+          "Copy/Clear"
+        ],
+        "input": "Text string; no file input.",
+        "output": "Percent-encoded or decoded text.",
+        "limitations": [
+          "Not a URL parser",
+          "Do not claim form-urlencoded plus-for-space behavior"
+        ],
+        "example": "hello world -> hello%20world.",
+        "troubleshooting": [
+          "Malformed percent escapes may fail",
+          "Reserved delimiters are component data"
+        ],
+        "faq_topics": [
+          "What is percent encoding?",
+          "Is this a whole-URL validator? No.",
+          "Why can decode fail?",
+          "Does it convert files? No."
+        ],
+        "internal_links": [
+          "/base64-encoder",
+          "/text-to-slug",
+          "/json-formatter",
+          "/guides/generate-test-data"
+        ],
+        "schema": [
+          "WebPage",
+          "BreadcrumbList"
+        ],
+        "social": "Approved social image required.",
+        "verification": {
+          "code_verified": [
+            "Component functions and text UI"
+          ],
+          "needs_runtime_test": [
+            "Reserved-character output",
+            "Malformed sequences"
+          ]
+        }
+      },
+      {
+        "slug": "case-converter",
+        "url": "/case-converter",
+        "status": "IMPLEMENT",
+        "intent": "Convert pasted text among the case modes shown in the UI.",
+        "primary_keyword": "text case converter",
+        "related_queries": [
+          "uppercase converter",
+          "lowercase converter",
+          "title case converter",
+          "sentence case converter",
+          "toggle case"
+        ],
+        "title": "Text Case Converter | WordsCompare",
+        "meta_description": "Change pasted text to uppercase, lowercase, title case, sentence case, toggle case or inverse case, then copy the converted result.",
+        "h1": "Text Case Converter",
+        "intro_topic": "List only the six case modes actually displayed.",
+        "sections": [
+          "Available case modes",
+          "Convert pasted text",
+          "Examples",
+          "Limitations"
+        ],
+        "steps": [
+          "Enter text",
+          "Choose a displayed mode",
+          "Review output",
+          "Copy or clear"
+        ],
+        "verified_features": [
+          "Uppercase",
+          "Lowercase",
+          "Title Case",
+          "Sentence Case",
+          "Toggle Case",
+          "Inverse Case",
+          "Copy",
+          "Clear"
+        ],
+        "input": "Pasted text.",
+        "output": "Transformed text.",
+        "limitations": [
+          "camelCase/snake_case are mentioned in metadata but absent from visible UI",
+          "Unicode and punctuation behavior need testing"
+        ],
+        "example": "Use a short phrase and verify exact output for each mode before publication.",
+        "troubleshooting": [
+          "Test contractions, punctuation, multiple lines and non-Latin text"
+        ],
+        "faq_topics": [
+          "Which modes are available?",
+          "Can it convert multiple lines?",
+          "Does it make camelCase or snake_case? Not shown in UI.",
+          "Can I copy output?"
+        ],
+        "internal_links": [
+          "/text-to-slug",
+          "/find-replace-text",
+          "/remove-extra-spaces",
+          "/word-counter"
+        ],
+        "schema": [
+          "WebPage",
+          "BreadcrumbList"
+        ],
+        "social": "Do not claim unsupported modes; approved shared image required.",
+        "verification": {
+          "code_verified": [
+            "Six visible modes and controls"
+          ],
+          "needs_runtime_test": [
+            "Punctuation, contractions, Unicode"
+          ]
+        }
+      },
+      {
+        "slug": "find-replace-text",
+        "url": "/find-replace-text",
+        "status": "IMPLEMENT",
+        "intent": "Replace matches inside pasted text.",
+        "primary_keyword": "find and replace text online",
+        "related_queries": [
+          "replace text in string",
+          "case-sensitive replace",
+          "whole-word replacement",
+          "regex replace text"
+        ],
+        "title": "Find and Replace Text Online | WordsCompare",
+        "meta_description": "Paste text, enter a search value and replacement, and choose case-sensitive, whole-word or regular-expression options before replacing.",
+        "h1": "Find and Replace Text",
+        "intro_topic": "In-page text transformation, not web search or document editing.",
+        "sections": [
+          "Enter source text",
+          "Choose match options",
+          "Replace all matches",
+          "Review output",
+          "Regex limitations"
+        ],
+        "steps": [
+          "Paste text",
+          "Enter Find What and Replace With",
+          "Choose case/whole-word/regex options",
+          "Replace All",
+          "Review output"
+        ],
+        "verified_features": [
+          "Text input",
+          "Search/replacement inputs",
+          "Case Sensitive",
+          "Whole Word",
+          "Regex",
+          "Replace All",
+          "Output"
+        ],
+        "input": "Pasted text plus search and replacement values.",
+        "output": "Updated text.",
+        "limitations": [
+          "No file batch editing shown",
+          "Regex errors and whole-word semantics require runtime tests",
+          "Blank replacement deletes matches according to UI"
+        ],
+        "example": "Replace cat with dog in a short sample sentence.",
+        "troubleshooting": [
+          "Test regex escaping and invalid patterns",
+          "Confirm unchecked case-sensitive default"
+        ],
+        "faq_topics": [
+          "Can replacement be blank? UI says yes.",
+          "Is match case-sensitive by default? Verify code before stating.",
+          "What does whole-word mean?",
+          "What regex syntax is supported?",
+          "Can it edit files? No upload shown."
+        ],
+        "internal_links": [
+          "/case-converter",
+          "/text-comparison",
+          "/remove-extra-spaces",
+          "/word-counter"
+        ],
+        "schema": [
+          "WebPage",
+          "BreadcrumbList"
+        ],
+        "social": "Avoid bulk-file claims; approved image required.",
+        "verification": {
+          "code_verified": [
+            "Fields and options"
+          ],
+          "needs_runtime_test": [
+            "Whole-word logic",
+            "Regex errors",
+            "Default case behavior"
+          ]
+        }
+      },
+      {
+        "slug": "remove-extra-spaces",
+        "url": "/remove-extra-spaces",
+        "status": "IMPLEMENT",
+        "intent": "Clean whitespace in pasted text using selectable options.",
+        "primary_keyword": "remove extra spaces from text online",
+        "related_queries": [
+          "remove multiple spaces",
+          "trim leading and trailing whitespace",
+          "remove extra line breaks",
+          "replace tabs with spaces"
+        ],
+        "title": "Remove Extra Spaces from Text | WordsCompare",
+        "meta_description": "Paste text and choose whether to trim edges, collapse repeated spaces, replace tabs or reduce/remove line breaks. Review and copy the result.",
+        "h1": "Remove Extra Spaces",
+        "intro_topic": "Explain the exact five available cleanup options.",
+        "sections": [
+          "Trim edge whitespace",
+          "Collapse repeated spaces",
+          "Replace tabs",
+          "Reduce or remove line breaks",
+          "Copy cleaned text"
+        ],
+        "steps": [
+          "Choose cleanup options",
+          "Enter text",
+          "Clean Text",
+          "Review and copy/reset"
+        ],
+        "verified_features": [
+          "Trim edges",
+          "Collapse multiple spaces",
+          "Replace tabs",
+          "Collapse multiple line breaks",
+          "Remove all line breaks"
+        ],
+        "input": "Pasted text; no upload control.",
+        "output": "Cleaned text.",
+        "limitations": [
+          "Unicode/non-breaking whitespace behavior needs verification",
+          "Options are selective; do not claim all whitespace is removed"
+        ],
+        "example": "Show a short input with repeated spaces and line breaks after verifying output.",
+        "troubleshooting": [
+          "Explain tabs and line breaks separately from ordinary spaces",
+          "Test newline variants"
+        ],
+        "faq_topics": [
+          "Can it trim edges?",
+          "Can it collapse repeated spaces?",
+          "Can one line break be preserved?",
+          "Can all line breaks be removed?",
+          "Does it support files? No upload shown."
+        ],
+        "internal_links": [
+          "/case-converter",
+          "/find-replace-text",
+          "/word-counter",
+          "/text-comparison"
+        ],
+        "schema": [
+          "WebPage",
+          "BreadcrumbList"
+        ],
+        "social": "Approved shared image required.",
+        "verification": {
+          "code_verified": [
+            "Visible options"
+          ],
+          "needs_runtime_test": [
+            "Unicode whitespace",
+            "Tabs",
+            "Newline variants"
+          ]
+        }
+      },
+      {
+        "slug": "reverse-text",
+        "url": "/reverse-text",
+        "status": "IMPLEMENT",
+        "intent": "Reverse characters or reverse word order in entered text.",
+        "primary_keyword": "reverse text online",
+        "related_queries": [
+          "reverse characters",
+          "reverse words",
+          "flip text backwards"
+        ],
+        "title": "Reverse Text Online: Characters or Words | WordsCompare",
+        "meta_description": "Paste text and choose whether to reverse its characters or reverse the order of its words. Review the result and copy it.",
+        "h1": "Reverse Text",
+        "intro_topic": "Clearly distinguish character reversal from word-order reversal.",
+        "sections": [
+          "Reverse characters",
+          "Reverse word order",
+          "Examples",
+          "Punctuation and Unicode limitations"
+        ],
+        "steps": [
+          "Enter text",
+          "Choose Characters or Words",
+          "Reverse",
+          "Review/copy/reset"
+        ],
+        "verified_features": [
+          "Two radio modes",
+          "Text input",
+          "Output and history controls"
+        ],
+        "input": "Pasted text.",
+        "output": "Transformed text.",
+        "limitations": [
+          "Do not call it mirror text",
+          "Punctuation, spacing and Unicode grapheme handling require test"
+        ],
+        "example": "hello -> olleh; hello world -> world hello, only after confirming exact spacing behavior.",
+        "troubleshooting": [
+          "Check punctuation and repeated spaces in word mode"
+        ],
+        "faq_topics": [
+          "Can it reverse letters?",
+          "Can it reverse word order?",
+          "Does it mirror text?",
+          "How are punctuation and spaces handled?",
+          "Can I upload a document? No upload shown."
+        ],
+        "internal_links": [
+          "/case-converter",
+          "/text-comparison",
+          "/text-to-slug"
+        ],
+        "schema": [
+          "WebPage",
+          "BreadcrumbList"
+        ],
+        "social": "Approved shared image required.",
+        "verification": {
+          "code_verified": [
+            "Two visible modes"
+          ],
+          "needs_runtime_test": [
+            "Punctuation",
+            "Repeated spaces",
+            "Unicode"
+          ]
+        }
+      },
+      {
+        "slug": "text-to-slug",
+        "url": "/text-to-slug",
+        "status": "IMPLEMENT",
+        "intent": "Convert pasted text into a URL-style slug.",
+        "primary_keyword": "text to slug converter",
+        "related_queries": [
+          "generate URL slug",
+          "convert title to URL-friendly text",
+          "spaces to hyphens",
+          "lowercase slug"
+        ],
+        "title": "Text to Slug Converter | WordsCompare",
+        "meta_description": "Turn pasted text into a URL-style slug. Choose lowercase, hyphen replacement and special-character removal, then copy the result.",
+        "h1": "Text to Slug Converter",
+        "intro_topic": "Describe URL-style text transformation without ranking guarantees.",
+        "sections": [
+          "Create a slug",
+          "Choose lowercase",
+          "Replace spaces with hyphens",
+          "Remove special characters",
+          "Language and character limitations"
+        ],
+        "steps": [
+          "Paste text",
+          "Choose visible toggles",
+          "Convert",
+          "Review/copy/reset"
+        ],
+        "verified_features": [
+          "Lowercase",
+          "Replace spaces with hyphens",
+          "Remove special characters",
+          "Output and copy"
+        ],
+        "input": "Pasted text.",
+        "output": "Slug string.",
+        "limitations": [
+          "No SEO ranking guarantee",
+          "Accent transliteration/non-Latin behavior and repeated hyphens need verification",
+          "UI describes Latin letters, digits and hyphens"
+        ],
+        "example": "Use a short heading and show actual output after test.",
+        "troubleshooting": [
+          "Check whether accented characters are removed or transliterated",
+          "Test repeated spaces and punctuation"
+        ],
+        "faq_topics": [
+          "What is a slug?",
+          "Can I lowercase text?",
+          "Can spaces become hyphens?",
+          "Can special characters be removed?",
+          "How are non-Latin characters handled? Verify first."
+        ],
+        "internal_links": [
+          "/url-encoder",
+          "/case-converter",
+          "/find-replace-text",
+          "/developer-tools"
+        ],
+        "schema": [
+          "WebPage",
+          "BreadcrumbList"
+        ],
+        "social": "Avoid SEO outcome guarantees; approved image required.",
+        "verification": {
+          "code_verified": [
+            "Visible toggles and output"
+          ],
+          "needs_runtime_test": [
+            "Unicode/transliteration",
+            "Hyphen normalization"
+          ]
+        }
+      },
+      {
+        "slug": "word-counter",
+        "url": "/word-counter",
+        "status": "IMPLEMENT",
+        "intent": "Submit text and view word, character, sentence, paragraph and estimated time metrics.",
+        "primary_keyword": "word counter online",
+        "related_queries": [
+          "count words",
+          "character counter with or without spaces",
+          "sentence counter",
+          "paragraph count",
+          "reading time estimate"
+        ],
+        "title": "Word Counter: Words, Characters & Sentences | WordsCompare",
+        "meta_description": "Enter text to count words, characters, sentences and paragraphs, with estimated reading and speaking time. Review the counting notes.",
+        "h1": "Word Counter",
+        "intro_topic": "POST-based text analysis, not real-time counting.",
+        "sections": [
+          "Count words and characters",
+          "Sentence and paragraph counts",
+          "Estimated reading/speaking time",
+          "How counts are calculated",
+          "Language limitations"
+        ],
+        "steps": [
+          "Enter/paste text",
+          "Analyze Text",
+          "Review metrics and estimates",
+          "Clear"
+        ],
+        "verified_features": [
+          "POST form",
+          "Words",
+          "Characters with/without spaces",
+          "Sentences",
+          "Paragraphs",
+          "Reading and speaking estimates"
+        ],
+        "input": "Pasted text submitted by POST.",
+        "output": "Numeric metrics and estimated times.",
+        "limitations": [
+          "Uses PHP str_word_count and regex sentence splitting",
+          "Unicode/non-English and abbreviations may be approximate",
+          "Read/speaking times are estimates using 200/130 wpm",
+          "Not real-time"
+        ],
+        "example": "Use a short paragraph and label all time values as estimates.",
+        "troubleshooting": [
+          "Explain counting conventions",
+          "Test punctuation, Unicode, blank lines and spaces"
+        ],
+        "faq_topics": [
+          "Are spaces included in character count? With/without-space metrics exist.",
+          "Is it real-time? No; server handles POST.",
+          "How are sentences counted? Basic punctuation split.",
+          "Are reading/speaking times exact? No, rate-based estimates.",
+          "Does it support all languages? Not established."
+        ],
+        "internal_links": [
+          "/text-comparison",
+          "/case-converter",
+          "/find-replace-text",
+          "/remove-extra-spaces"
+        ],
+        "schema": [
+          "WebPage",
+          "BreadcrumbList"
+        ],
+        "social": "Do not claim perfect counts or real-time updates; approved image required.",
+        "verification": {
+          "code_verified": [
+            "POST behavior",
+            "Displayed metrics",
+            "Rate constants"
+          ],
+          "needs_runtime_test": [
+            "Unicode",
+            "Punctuation",
+            "Newlines"
+          ]
+        }
+      }
+    ],
+    "registered_review": [
+      {
+        "slug": "add-page-number-to-pdf",
+        "reason": "Verify page selection, numbering position/format, output and upload processing before describing."
+      },
+      {
+        "slug": "add-watermark-to-pdf",
+        "reason": "Verify text/image watermark options, opacity/placement and output fidelity."
+      },
+      {
+        "slug": "age-calculator",
+        "reason": "Verify date boundaries, timezone/leap-day behavior and avoid unsupported health/demographic claims."
+      },
+      {
+        "slug": "bmi-calculator",
+        "reason": "YMYL: verify adult/child scope, field effects and official health interpretation; BMI is not diagnosis."
+      },
+      {
+        "slug": "cagr-calculator",
+        "reason": "Verify formula, period assumptions, examples and distinguish historical growth from forecast/advice."
+      },
+      {
+        "slug": "color-picker",
+        "reason": "Verify supported color formats, conversion accuracy and clipboard behavior."
+      },
+      {
+        "slug": "compound-interest-calculator",
+        "reason": "Verify compounding schedule, deposits, units and assumptions; avoid return guarantees."
+      },
+      {
+        "slug": "delete-pdf-pages",
+        "reason": "Verify page-selection behavior, output order and upload/download flow."
+      },
+      {
+        "slug": "discount-calculator",
+        "reason": "Verify discount modes, input ranges and rounding examples."
+      },
+      {
+        "slug": "emi-calculator",
+        "reason": "Financial YMYL: verify formula, compounding, payment timing, currency and user-input assumptions."
+      },
+      {
+        "slug": "excel-to-pdf",
+        "reason": "Verify accepted spreadsheet formats, sheets/page layout, endpoint and exposed ConvertAPI credential remediation."
+      },
+      {
+        "slug": "gst-calculator",
+        "reason": "YMYL: verify current rates and inclusive/exclusive logic; source content makes ITC/reverse-charge claims absent from visible UI."
+      },
+      {
+        "slug": "hash-generator",
+        "reason": "Verify algorithms, text/file inputs, output encoding and avoid presenting hashes as encryption."
+      },
+      {
+        "slug": "html-to-pdf",
+        "reason": "Verify HTML input path, external assets, layout/output and processing location."
+      },
+      {
+        "slug": "income-tax-calculator",
+        "reason": "YMYL: validate FY 2026-27 scope/rates, regimes, rebate, cess, cap and exclusions against current official sources."
+      },
+      {
+        "slug": "jpg-to-pdf",
+        "reason": "Verify accepted MIME/extensions, multiple-image ordering, page sizing and output behavior."
+      },
+      {
+        "slug": "json-to-pdf",
+        "reason": "Verify accepted JSON structure, rendering/output limits and whether conversion is text or structured report."
+      },
+      {
+        "slug": "json-viewer",
+        "reason": "Verify nested structure navigation and distinguish visualization from schema validation."
+      },
+      {
+        "slug": "jwt-decoder",
+        "reason": "Security wording: decoder does not verify signature or validate token authenticity; inspect Base64URL and sensitive-data handling."
+      },
+      {
+        "slug": "lock-pdf",
+        "reason": "Verify password/encryption strength, supported algorithms, recovery limitations and safe credential handling."
+      },
+      {
+        "slug": "merge-pdf",
+        "reason": "Verify file count/size limits, order controls, output fidelity and processing location."
+      },
+      {
+        "slug": "password-generator",
+        "reason": "Security: review cryptographic RNG, character options, entropy claims and client/server handling before calling passwords secure."
+      },
+      {
+        "slug": "pdf-metadata-editor",
+        "reason": "Verify editable fields, metadata persistence, output download and privacy claims."
+      },
+      {
+        "slug": "pdf-to-audio",
+        "reason": "Verify text extraction, voice/language, duration and generated audio format."
+      },
+      {
+        "slug": "pdf-to-excel",
+        "reason": "Verify output format/table extraction, request endpoint and exposed credentials."
+      },
+      {
+        "slug": "pdf-to-html",
+        "reason": "Verify layout/image extraction, input limits and output fidelity; distinguish semantic HTML from positioned conversion."
+      },
+      {
+        "slug": "pdf-to-jpg",
+        "reason": "Verify page selection, resolution, image output packaging and accepted PDF limits."
+      },
+      {
+        "slug": "pdf-to-json",
+        "reason": "Verify JSON output semantics and whether structured extraction is actually available."
+      },
+      {
+        "slug": "pdf-to-ocr",
+        "reason": "Verify OCR engine, language support, text layer/output and distinction from ordinary extraction."
+      },
+      {
+        "slug": "pdf-to-word",
+        "reason": "UI lists DOCX/DOC/RTF but endpoint requests DOCX; resolve actual formats and cloud processing before copy."
+      },
+      {
+        "slug": "ppf-calculator",
+        "reason": "YMYL: validate current government rate, contribution/tenure/tax assumptions and as-of date."
+      },
+      {
+        "slug": "qr-code-generator",
+        "reason": "Verify data types, QR error correction, output formats and scan behavior."
+      },
+      {
+        "slug": "reorder-pdf-pages",
+        "reason": "Verify page drag/order interface, selected-page semantics and generated output."
+      },
+      {
+        "slug": "repair-pdf",
+        "reason": "Verify what corruption cases are supported and avoid guaranteed recovery claims."
+      },
+      {
+        "slug": "retirement-calculator",
+        "reason": "Financial YMYL: verify inflation/return assumptions, timeline and non-advisory presentation."
+      },
+      {
+        "slug": "simple-calculator",
+        "reason": "Verify supported operations, precision, keyboard behavior and error handling."
+      },
+      {
+        "slug": "sip-calculator",
+        "reason": "Financial YMYL: verify contribution timing, return assumptions and estimated-only wording."
+      },
+      {
+        "slug": "unit-converter",
+        "reason": "Verify supported unit families, conversion factors, precision and displayed options."
+      },
+      {
+        "slug": "word-to-pdf",
+        "reason": "Verify actual endpoint, DOC/DOCX/RTF support and client-delivered credential remediation; server API file is empty."
+      }
+    ],
+    "unregistered_review": [
+      {
+        "slug": "apy-calculator",
+        "purpose": "Calculate APY",
+        "category_candidate": "calculators",
+        "recommendation": "Verify compounding formula/rates; decide registry and search inclusion."
+      },
+      {
+        "slug": "brokerage-calculator",
+        "purpose": "Calculate stock-trading fees",
+        "category_candidate": "calculators",
+        "recommendation": "Verify jurisdiction, fee model and assumptions."
+      },
+      {
+        "slug": "calendar-generator",
+        "purpose": "Generate a calendar",
+        "category_candidate": "utility",
+        "recommendation": "Verify date range, options and export."
+      },
+      {
+        "slug": "car-loan-emi-calculator",
+        "purpose": "Estimate car-loan installments",
+        "category_candidate": "calculators",
+        "recommendation": "Verify loan assumptions and distinctness from general EMI."
+      },
+      {
+        "slug": "compress-pdf",
+        "purpose": "Compress PDF with level selector",
+        "category_candidate": "pdf-tools",
+        "homepage_link": true,
+        "recommendation": "Test compression effect, limits and processing before publication."
+      },
+      {
+        "slug": "csv-to-pdf",
+        "purpose": "Convert CSV to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify backend output and rotate exposed API credential before SEO."
+      },
+      {
+        "slug": "dwg-to-pdf",
+        "purpose": "Convert DWG to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify dependencies, input support and output."
+      },
+      {
+        "slug": "epf-calculator",
+        "purpose": "Estimate EPF",
+        "category_candidate": "calculators",
+        "recommendation": "Verify statutory rates, dates and assumptions against EPFO."
+      },
+      {
+        "slug": "epub-to-pdf",
+        "purpose": "Convert EPUB to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify accepted variants, rendering and output."
+      },
+      {
+        "slug": "fd-calculator",
+        "purpose": "Estimate fixed-deposit maturity",
+        "category_candidate": "calculators",
+        "recommendation": "Verify compounding, rate source and tenure assumptions."
+      },
+      {
+        "slug": "flat-vs-reducing-rate-calculator",
+        "purpose": "Compare flat and reducing loan rates",
+        "category_candidate": "calculators",
+        "recommendation": "Verify comparison formula and assumptions."
+      },
+      {
+        "slug": "flatten-pdf",
+        "purpose": "Flatten interactive PDF content",
+        "category_candidate": "pdf-tools",
+        "recommendation": "Verify exactly which form fields/layers are flattened."
+      },
+      {
+        "slug": "home-equity-loan-calculator",
+        "purpose": "Estimate home-equity loan payments",
+        "category_candidate": "calculators",
+        "recommendation": "Verify jurisdiction, product model, rates and assumptions."
+      },
+      {
+        "slug": "home-loan-emi-calculator",
+        "purpose": "Estimate home-loan EMI",
+        "category_candidate": "calculators",
+        "recommendation": "Verify formula and meaningful distinction from general EMI."
+      },
+      {
+        "slug": "hra-calculator",
+        "purpose": "Estimate HRA exemption",
+        "category_candidate": "calculators",
+        "recommendation": "Verify current tax year, city and salary assumptions with official sources."
+      },
+      {
+        "slug": "investment-returns-calculator",
+        "purpose": "Estimate investment returns",
+        "category_candidate": "calculators",
+        "recommendation": "Verify model; avoid personalized investment advice or return guarantees."
+      },
+      {
+        "slug": "ipynb-to-pdf",
+        "purpose": "Convert Jupyter Notebook to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify code/output rendering, dependencies and output format."
+      },
+      {
+        "slug": "jfif-to-pdf",
+        "purpose": "Convert image input to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Runtime-test every accepted image format and multi-file behavior."
+      },
+      {
+        "slug": "loan-eligibility-calculator",
+        "purpose": "Estimate loan eligibility",
+        "category_candidate": "calculators",
+        "recommendation": "Verify formula and state this is not lender approval."
+      },
+      {
+        "slug": "margin-calculator",
+        "purpose": "Calculate margin/markup",
+        "category_candidate": "calculators",
+        "recommendation": "Verify input/output definitions and distinguish margin from markup."
+      },
+      {
+        "slug": "markdown-to-pdf",
+        "purpose": "Convert Markdown or text to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify parser, rendering and accepted inputs."
+      },
+      {
+        "slug": "mobi-to-pdf",
+        "purpose": "Convert MOBI to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify route wiring, server dependencies, format support and temporary-file handling."
+      },
+      {
+        "slug": "mutual-fund-returns-calculator",
+        "purpose": "Estimate mutual-fund returns",
+        "category_candidate": "calculators",
+        "recommendation": "Verify model and use estimate-only, non-advisory language."
+      },
+      {
+        "slug": "nps-calculator",
+        "purpose": "Estimate National Pension System values",
+        "category_candidate": "calculators",
+        "recommendation": "Verify current scheme, annuity and tax assumptions."
+      },
+      {
+        "slug": "offer-letter-generator",
+        "purpose": "Generate an offer-letter document",
+        "category_candidate": "utility",
+        "recommendation": "Verify fields, template behavior and download format."
+      },
+      {
+        "slug": "payroll-sheet-generator",
+        "purpose": "Generate payroll sheet/report",
+        "category_candidate": "utility",
+        "recommendation": "Verify fields, jurisdiction-sensitive calculations and output."
+      },
+      {
+        "slug": "pdf-editor",
+        "purpose": "Edit PDF",
+        "category_candidate": "pdf-tools",
+        "recommendation": "Trace each visible edit mode, save behavior and output before describing features."
+      },
+      {
+        "slug": "pdf-to-csv",
+        "purpose": "Extract PDF tables to CSV per page label",
+        "category_candidate": "converters",
+        "recommendation": "BLOCKED: UI says CSV/XLSX while source requests PDF-to-XLSX endpoint; resolve mismatch."
+      },
+      {
+        "slug": "pdf-to-epub",
+        "purpose": "Convert PDF to EPUB",
+        "category_candidate": "converters",
+        "recommendation": "Verify output structure and reading quality."
+      },
+      {
+        "slug": "pdf-to-ipynb",
+        "purpose": "Convert PDF to notebook",
+        "category_candidate": "converters",
+        "recommendation": "Verify viable workflow and notebook output semantics."
+      },
+      {
+        "slug": "pdf-to-jfif",
+        "purpose": "Convert PDF pages to JFIF",
+        "category_candidate": "converters",
+        "recommendation": "Verify output MIME/extension, page controls and package behavior."
+      },
+      {
+        "slug": "pdf-to-markdown",
+        "purpose": "Extract PDF content to Markdown",
+        "category_candidate": "converters",
+        "recommendation": "Verify structure, tables, links and extraction limits."
+      },
+      {
+        "slug": "pdf-to-mobi",
+        "purpose": "Convert PDF to MOBI",
+        "category_candidate": "converters",
+        "recommendation": "Verify tool-page wiring, Calibre/Python deployment dependencies and output."
+      },
+      {
+        "slug": "pdf-to-png",
+        "purpose": "Render PDF pages to PNG",
+        "category_candidate": "converters",
+        "recommendation": "Verify resolution, page ranges and download packaging."
+      },
+      {
+        "slug": "pdf-to-ppt",
+        "purpose": "Convert PDF to PowerPoint",
+        "category_candidate": "converters",
+        "recommendation": "Verify external service/output and remediate exposed credentials."
+      },
+      {
+        "slug": "pdf-to-psd",
+        "purpose": "Convert PDF content to PSD",
+        "category_candidate": "converters",
+        "recommendation": "Verify raster/page behavior and exact output format."
+      },
+      {
+        "slug": "pdf-to-text",
+        "purpose": "Extract text from PDF",
+        "category_candidate": "pdf-tools",
+        "recommendation": "BLOCKED: OCR claim is not confirmed by the extraction path; verify OCR implementation."
+      },
+      {
+        "slug": "pdf-to-webp",
+        "purpose": "Convert PDF pages to WebP",
+        "category_candidate": "converters",
+        "recommendation": "Verify image output and file packaging."
+      },
+      {
+        "slug": "pdf-to-xml",
+        "purpose": "Extract or convert PDF content to XML",
+        "category_candidate": "converters",
+        "recommendation": "Define and verify XML output structure."
+      },
+      {
+        "slug": "percentage-calculator",
+        "purpose": "Calculate percentages",
+        "category_candidate": "calculators",
+        "recommendation": "Verify every operation and input range; decide registry/search inclusion."
+      },
+      {
+        "slug": "personal-loan-calculator",
+        "purpose": "Estimate personal-loan payments/interest",
+        "category_candidate": "calculators",
+        "recommendation": "Verify model and meaningful distinction from general EMI."
+      },
+      {
+        "slug": "pnr-to-pdf",
+        "purpose": "Generate PDF from text/JSON per accept list",
+        "category_candidate": "utility",
+        "recommendation": "Determine whether it parses PNR data or only formats supplied content."
+      },
+      {
+        "slug": "ppt-to-pdf",
+        "purpose": "Convert PPT/PPTX to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify actual validation, processing path and output."
+      },
+      {
+        "slug": "pto-calculator",
+        "purpose": "Calculate paid-time-off balance",
+        "category_candidate": "utility",
+        "recommendation": "Verify accrual models and regional/workplace assumptions."
+      },
+      {
+        "slug": "rd-calculator",
+        "purpose": "Estimate recurring-deposit maturity",
+        "category_candidate": "calculators",
+        "recommendation": "Verify contribution schedule, compounding and rates."
+      },
+      {
+        "slug": "refinance-calculator",
+        "purpose": "Estimate refinancing savings",
+        "category_candidate": "calculators",
+        "recommendation": "Verify old/new loan inputs, fees and savings equation."
+      },
+      {
+        "slug": "rotate-pdf",
+        "purpose": "Rotate PDF pages",
+        "category_candidate": "pdf-tools",
+        "recommendation": "Verify angle choices, page selection and generated output."
+      },
+      {
+        "slug": "rtf-to-pdf",
+        "purpose": "Convert RTF to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Runtime-test accepted extension, rendering fidelity and backend."
+      },
+      {
+        "slug": "salary-calculator",
+        "purpose": "Estimate salary/take-home/CTC",
+        "category_candidate": "calculators",
+        "recommendation": "Verify jurisdiction, tax year, benefits and assumptions."
+      },
+      {
+        "slug": "scientific-calculator",
+        "purpose": "Scientific calculations",
+        "category_candidate": "calculators",
+        "recommendation": "Verify supported operations and numeric edge behavior."
+      },
+      {
+        "slug": "shreelipi-to-pdf",
+        "purpose": "Convert Shreelipi text to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify font embedding, script support and output."
+      },
+      {
+        "slug": "speech-to-pdf",
+        "purpose": "Speech capture/transcription to PDF per title",
+        "category_candidate": "utility",
+        "recommendation": "Verify browser API support, languages, permissions and generated document."
+      },
+      {
+        "slug": "split-pdf",
+        "purpose": "Split PDF into multiple files",
+        "category_candidate": "pdf-tools",
+        "homepage_link": true,
+        "recommendation": "Verify page/range selection and output packaging."
+      },
+      {
+        "slug": "sukanya-samriddhi-yojana-calculator",
+        "purpose": "Estimate SSY returns",
+        "category_candidate": "calculators",
+        "recommendation": "Verify current government rate/date assumptions against official notifications."
+      },
+      {
+        "slug": "svg-to-pdf",
+        "purpose": "Convert SVG to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify embedded assets, input constraints and output."
+      },
+      {
+        "slug": "tax-calculator",
+        "purpose": "Generic income/sales-tax slider tool",
+        "category_candidate": "calculators",
+        "recommendation": "BLOCKED: page says FY 2024-25 but UI is generic and conflicts with current income-tax page; reconcile or consolidate."
+      },
+      {
+        "slug": "tds-calculator",
+        "purpose": "Estimate TDS for selected payment types",
+        "category_candidate": "calculators",
+        "recommendation": "Verify sections, thresholds, rates and tax year against official sources."
+      },
+      {
+        "slug": "text-to-pdf",
+        "purpose": "Convert text/TXT to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify pasted-text/file path, accepted MIME and output."
+      },
+      {
+        "slug": "tiff-to-pdf",
+        "purpose": "Convert TIFF/TIF to PDF",
+        "category_candidate": "converters",
+        "recommendation": "Verify accepted extensions and multipage TIFF behavior."
+      }
+    ]
+  },
+  "category_pages": [
+    {
+      "slug": "developer-tools",
+      "url": "/developer-tools",
+      "status": "REVIEW",
+      "title": "Developer Tools for JSON, Text & Encoding | WordsCompare",
+      "h1": "Developer Tools",
+      "outline": [
+        "JSON and data",
+        "Encoding and tokens",
+        "Security and hashes",
+        "Web development",
+        "Text processing",
+        "Date/time and utilities"
+      ],
+      "links": [
+        "/json-tools",
+        "/qa-tools",
+        "/api-testing-tools",
+        "/devops-tools"
+      ],
+      "faq_topics": [
+        "Do tools send API requests?",
+        "Which tools accept text?",
+        "Does JWT decoding verify signatures?"
+      ],
+      "review": "Registry omits 59 tool views; validate complete child list and remove unsupported API-client claims."
+    },
+    {
+      "slug": "qa-tools",
+      "url": "/qa-tools",
+      "status": "REVIEW",
+      "title": "QA & Testing Tools for Payloads and Text | WordsCompare",
+      "h1": "QA Testing Tools",
+      "outline": [
+        "Manual API payload checks",
+        "Test data",
+        "Text comparison",
+        "Authentication utilities"
+      ],
+      "links": [
+        "/api-testing-tools",
+        "/text-tools",
+        "/json-tools",
+        "/developer-tools"
+      ],
+      "faq_topics": [
+        "Can tools run tests?",
+        "How to compare expected and actual text?",
+        "Does JSON formatting validate schemas?"
+      ],
+      "review": "Present as manual utilities, not test runner; reconcile route registry."
+    },
+    {
+      "slug": "api-testing-tools",
+      "url": "/api-testing-tools",
+      "status": "REVIEW",
+      "title": "API Testing Utilities for JSON and Tokens | WordsCompare",
+      "h1": "API Testing Tools",
+      "outline": [
+        "JSON/API data",
+        "Authentication",
+        "Encoding",
+        "HTTP response text",
+        "Test data"
+      ],
+      "links": [
+        "/json-formatter",
+        "/json-viewer",
+        "/text-comparison",
+        "/jwt-decoder",
+        "/base64-encoder",
+        "/url-encoder"
+      ],
+      "faq_topics": [
+        "Does it send requests?",
+        "Does text comparison parse JSON?",
+        "Does JWT decode verify signatures?"
+      ],
+      "review": "No HTTP request client is verified; avoid claims of API testing execution."
+    },
+    {
+      "slug": "devops-tools",
+      "url": "/devops-tools",
+      "status": "REVIEW",
+      "title": "DevOps Utilities for Hashes and Payloads | WordsCompare",
+      "h1": "DevOps Tools",
+      "outline": [
+        "Hashes and checksums",
+        "Encoding",
+        "Payload inspection"
+      ],
+      "links": [
+        "/hash-generator",
+        "/base64-encoder",
+        "/url-encoder",
+        "/json-formatter"
+      ],
+      "faq_topics": [
+        "Does this integrate with CI/CD?",
+        "Which hash operations are available?"
+      ],
+      "review": "Avoid pipeline/deployment integration claims; associated DevOps guide is placeholder."
+    },
+    {
+      "slug": "json-tools",
+      "url": "/json-tools",
+      "status": "REVIEW",
+      "title": "JSON Tools: Format, View and Convert | WordsCompare",
+      "h1": "JSON Tools",
+      "outline": [
+        "Format and minify",
+        "View nested JSON",
+        "JSON conversion"
+      ],
+      "links": [
+        "/json-formatter",
+        "/json-viewer",
+        "/json-to-pdf",
+        "/pdf-to-json"
+      ],
+      "faq_topics": [
+        "Format vs validate?",
+        "Does viewer enforce schema?",
+        "Can it structurally diff?"
+      ],
+      "review": "No schema validator or structural diff claim without verified feature."
+    },
+    {
+      "slug": "text-tools",
+      "url": "/text-tools",
+      "status": "REVIEW",
+      "title": "Text Tools for Cleanup, Counting and Comparison | WordsCompare",
+      "h1": "Text & Content Tools",
+      "outline": [
+        "Transform text",
+        "Clean whitespace",
+        "Count text",
+        "Compare text"
+      ],
+      "links": [
+        "/case-converter",
+        "/text-to-slug",
+        "/find-replace-text",
+        "/remove-extra-spaces",
+        "/word-counter",
+        "/text-comparison"
+      ],
+      "faq_topics": [
+        "What does whitespace cleanup change?",
+        "Can it compare files?",
+        "How are words counted?"
+      ],
+      "review": "Verify child membership and describe text-only behaviors accurately."
+    },
+    {
+      "slug": "pdf-tools",
+      "url": "/pdf-tools",
+      "status": "REVIEW",
+      "title": "PDF Tools for Editing, Conversion and Organization | WordsCompare",
+      "h1": "PDF Tools",
+      "outline": [
+        "Organize pages",
+        "Edit and manage",
+        "Convert/extract"
+      ],
+      "links": [
+        "/merge-pdf",
+        "/split-pdf",
+        "/compress-pdf",
+        "/pdf-to-text"
+      ],
+      "faq_topics": [
+        "Which actions upload a PDF?",
+        "What output formats exist?",
+        "Does OCR occur?"
+      ],
+      "review": "Only link verified routes; unregistered tools need taxonomy decision and converter claims need runtime verification."
+    },
+    {
+      "slug": "calculators",
+      "url": "/calculators",
+      "status": "REVIEW",
+      "title": "Calculators for Loans, Tax and Everyday Use | WordsCompare",
+      "h1": "Calculators",
+      "outline": [
+        "Loans",
+        "Tax and payroll",
+        "Savings and investing",
+        "Health/everyday"
+      ],
+      "links": [
+        "/emi-calculator",
+        "/income-tax-calculator",
+        "/gst-calculator",
+        "/bmi-calculator",
+        "/age-calculator"
+      ],
+      "faq_topics": [
+        "Which tax year?",
+        "Are outputs advice?",
+        "Which values are assumptions?"
+      ],
+      "review": "YMYL review and registry completion required; visibly date financial assumptions."
+    },
+    {
+      "slug": "converters",
+      "url": "/converters",
+      "status": "REVIEW",
+      "title": "Document, Text and Unit Converters | WordsCompare",
+      "h1": "Converters",
+      "outline": [
+        "Document conversions",
+        "PDF conversions",
+        "Text/data conversions",
+        "Unit conversion"
+      ],
+      "links": [
+        "/word-to-pdf",
+        "/pdf-to-word",
+        "/excel-to-pdf",
+        "/pdf-to-excel",
+        "/unit-converter"
+      ],
+      "faq_topics": [
+        "What exact formats are supported?",
+        "How do layouts change?"
+      ],
+      "review": "List only source- and runtime-verified direction-specific conversions."
+    }
+  ],
+  "guide_pages": [
+    {
+      "url": "/guides",
+      "status": "REVIEW",
+      "title": "WordsCompare Guides",
+      "h1": "Guides",
+      "outline": [
+        "Developer guides",
+        "QA/API guides",
+        "DevOps guides"
+      ],
+      "schema": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "review": "Complete directory of all current guides; not an Article page."
+    },
+    {
+      "url": "/guides/api-testing",
+      "status": "SUPPORTING",
+      "title": "API Testing Guides",
+      "h1": "API Testing Guides",
+      "outline": [
+        "Compare API response text",
+        "Validate JSON syntax",
+        "Inspect JWTs",
+        "HTTP status codes"
+      ],
+      "links": [
+        "/guides/compare-api-responses",
+        "/guides/validate-json",
+        "/guides/decode-jwt-token",
+        "/guides/http-status-codes-api-testing"
+      ],
+      "schema": [
+        "WebPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "/guides/base64-vs-encryption",
+      "status": "SUPPORTING",
+      "title": "Base64 Encoding vs Encryption",
+      "h1": "Base64 Encoding vs Encryption",
+      "outline": [
+        "Encoding definition",
+        "Reversibility",
+        "Why Base64 is not encryption",
+        "When encryption is needed"
+      ],
+      "links": [
+        "/base64-encoder"
+      ],
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "/guides/compare-api-responses",
+      "status": "SUPPORTING",
+      "title": "How to Compare API Responses",
+      "h1": "How to Compare API Responses",
+      "outline": [
+        "Capture two responses",
+        "Format JSON for readability",
+        "Compare text",
+        "Limitations: no HTTP client or schema assertions"
+      ],
+      "links": [
+        "/text-comparison",
+        "/json-formatter",
+        "/json-viewer"
+      ],
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "/guides/compare-json-objects",
+      "status": "REVIEW",
+      "title": "How to Compare Two JSON Objects",
+      "h1": "How to Compare Two JSON Objects",
+      "outline": [
+        "Distinguish formatted-text diff from structural comparison",
+        "Examples",
+        "Consolidation decision"
+      ],
+      "links": [
+        "/json-formatter",
+        "/json-viewer",
+        "/text-comparison"
+      ],
+      "review": "Check SERP/intention overlap with API response guide; no structural diff claim."
+    },
+    {
+      "url": "/guides/decode-jwt-token",
+      "status": "SUPPORTING",
+      "title": "How to Decode a JWT Token",
+      "h1": "How to Decode a JWT Token",
+      "outline": [
+        "JWT segments",
+        "Header and payload",
+        "Base64URL concept",
+        "Decoding is not signature verification",
+        "Sensitive-token caution"
+      ],
+      "links": [
+        "/jwt-decoder",
+        "/base64-encoder",
+        "/json-formatter"
+      ],
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "/guides/developers",
+      "status": "SUPPORTING",
+      "title": "Developer Guides",
+      "h1": "Developer Guides",
+      "outline": [
+        "Current developer guide directory",
+        "JSON, encoding, token and text workflows"
+      ],
+      "links": [
+        "/guides/format-json-online",
+        "/guides/decode-jwt-token",
+        "/guides/base64-vs-encryption"
+      ],
+      "schema": [
+        "WebPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "/guides/devops",
+      "status": "REVIEW",
+      "title": "DevOps Guides",
+      "h1": "DevOps Guides",
+      "outline": [
+        "Replace placeholder with substantive operational guide or consolidate"
+      ],
+      "links": [
+        "/hash-generator",
+        "/base64-encoder",
+        "/json-formatter"
+      ],
+      "review": "Current page is placeholder; do not publish as complete guide until rewritten."
+    },
+    {
+      "url": "/guides/format-json-online",
+      "status": "SUPPORTING",
+      "title": "How to Format JSON Online",
+      "h1": "How to Format JSON Online",
+      "outline": [
+        "Steps",
+        "Indentation",
+        "Valid/invalid examples",
+        "Common syntax errors",
+        "Schema validation limitation"
+      ],
+      "links": [
+        "/json-formatter",
+        "/json-viewer",
+        "/text-comparison"
+      ],
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "/guides/generate-test-data",
+      "status": "SUPPORTING",
+      "title": "How to Generate Test Data",
+      "h1": "How to Generate Test Data",
+      "outline": [
+        "Transform existing strings",
+        "Case and slug examples",
+        "Base64 examples",
+        "Clarify not a random-data generator"
+      ],
+      "links": [
+        "/case-converter",
+        "/text-to-slug",
+        "/base64-encoder"
+      ],
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "/guides/http-status-codes-api-testing",
+      "status": "SUPPORTING",
+      "title": "HTTP Status Codes for API Testing",
+      "h1": "HTTP Status Codes Used in API Testing",
+      "outline": [
+        "Status classes",
+        "Common codes",
+        "Troubleshoot request/response",
+        "Authoritative HTTP references"
+      ],
+      "links": [
+        "/jwt-decoder",
+        "/json-formatter",
+        "/text-comparison"
+      ],
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "/guides/qa",
+      "status": "SUPPORTING",
+      "title": "QA Guides",
+      "h1": "QA Guides",
+      "outline": [
+        "QA guide directory",
+        "API, test data and comparison workflows"
+      ],
+      "links": [
+        "/guides/api-testing",
+        "/guides/compare-api-responses",
+        "/guides/generate-test-data"
+      ],
+      "schema": [
+        "WebPage",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "/guides/test-jwt-authentication",
+      "status": "REVIEW",
+      "title": "How to Test JWT Authentication",
+      "h1": "How to Test JWT Authentication",
+      "outline": [
+        "Safe manual checklist",
+        "Signature and issuer validation",
+        "Distinguish decoding from auth verification"
+      ],
+      "links": [
+        "/jwt-decoder"
+      ],
+      "review": "Current decoder does not verify signatures or call an authentication endpoint; substantial accuracy rewrite required."
+    },
+    {
+      "url": "/guides/validate-json",
+      "status": "SUPPORTING",
+      "title": "How to Validate JSON",
+      "h1": "How to Validate JSON",
+      "outline": [
+        "Syntax validation",
+        "Common parser errors",
+        "Syntax vs schema validation"
+      ],
+      "links": [
+        "/json-formatter",
+        "/json-viewer"
+      ],
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "/guides/validate-json-api-responses",
+      "status": "REVIEW",
+      "title": "How to Validate JSON API Responses",
+      "h1": "How to Validate JSON API Responses",
+      "outline": [
+        "Syntax checks",
+        "Manual field inspection",
+        "Schema/assertion tests not provided by this site"
+      ],
+      "links": [
+        "/json-formatter",
+        "/json-viewer",
+        "/text-comparison"
+      ],
+      "review": "Check overlap with general JSON validation and API response guides; consolidate or clearly distinguish."
+    }
+  ],
+  "home_and_info_pages": [
+    {
+      "url": "/",
+      "status": "SUPPORTING",
+      "title": "WordsCompare | PDF, Text, Calculator and Developer Tools",
+      "h1": "Retain clear site-level developer/QA proposition",
+      "outline": [
+        "Site purpose",
+        "Category discovery",
+        "Selected verified tools",
+        "Developer/QA workflows",
+        "Guides directory",
+        "Trust statements only after processing/legal review"
+      ],
+      "review": "Avoid unverified 100+, free, no-signup, browser-only and privacy promises; homepage is not the primary target for individual tool queries."
+    },
+    {
+      "url": "/about",
+      "status": "REVIEW",
+      "title": "About WordsCompare",
+      "h1": "About WordsCompare",
+      "review": "Description currently names Snapy Tools; reconcile product, processing, third parties and privacy claims."
+    },
+    {
+      "url": "/contact",
+      "status": "REVIEW",
+      "title": "Contact WordsCompare",
+      "h1": "Contact WordsCompare",
+      "review": "Form action targets missing includes/process_contact.php; verify form, contact data and response path."
+    },
+    {
+      "url": "/privacy",
+      "status": "REVIEW",
+      "title": "WordsCompare Privacy Policy",
+      "h1": "Privacy Policy",
+      "review": "Reconcile browser-only/local processing claims with ConvertAPI, server conversion, analytics and advertising; obtain legal review."
+    },
+    {
+      "url": "/disclaimer",
+      "status": "REVIEW",
+      "title": "WordsCompare Disclaimer",
+      "h1": "Disclaimer",
+      "review": "Verify legal/factual language, brand references and calculator/tool scope."
+    }
+  ],
+  "text_comparison_aliases": [
+    {
+      "url": "/compare-two-text-files-online",
+      "status": "REVIEW",
+      "implied_intent": "Compare uploaded files",
+      "actual_behavior": "Two pasted textareas; no file picker",
+      "recommendation": "After backlink/log review, redirect or canonicalize to /text-comparison; do not create separate indexed copy."
+    },
+    {
+      "url": "/compare-text-line-by-line",
+      "status": "REVIEW",
+      "implied_intent": "Line-by-line text diff",
+      "actual_behavior": "Generic text comparison",
+      "recommendation": "One content target; review alias retention and impact."
+    },
+    {
+      "url": "/compare-json-files-online",
+      "status": "REVIEW",
+      "implied_intent": "JSON-aware comparison",
+      "actual_behavior": "Generic text diff",
+      "recommendation": "No separate page unless structural JSON mode is verified; review redirect/noindex."
+    },
+    {
+      "url": "/compare-xml-files-online",
+      "status": "REVIEW",
+      "implied_intent": "XML-aware comparison",
+      "actual_behavior": "Generic text diff",
+      "recommendation": "No XML-specific claims; review redirect/noindex."
+    },
+    {
+      "url": "/compare-html-files-online",
+      "status": "REVIEW",
+      "implied_intent": "HTML/DOM diff",
+      "actual_behavior": "Generic text diff",
+      "recommendation": "No HTML parser verified; review redirect/noindex."
+    },
+    {
+      "url": "/compare-css-files-online",
+      "status": "REVIEW",
+      "implied_intent": "CSS-aware diff",
+      "actual_behavior": "Generic text diff",
+      "recommendation": "No selector/property-aware mode verified; review redirect/noindex."
+    },
+    {
+      "url": "/compare-code-files-online",
+      "status": "REVIEW",
+      "implied_intent": "Syntax-aware source diff",
+      "actual_behavior": "Generic text diff",
+      "recommendation": "No syntax highlighting verified; review redirect/noindex."
+    },
+    {
+      "url": "/online-text-diff-tool",
+      "status": "REVIEW",
+      "implied_intent": "Generic text diff",
+      "actual_behavior": "Same comparison tool",
+      "recommendation": "Strong duplicate intent; review canonical/redirect impact."
+    },
+    {
+      "url": "/text-difference-checker",
+      "status": "REVIEW",
+      "implied_intent": "Generic difference checker",
+      "actual_behavior": "Same comparison tool",
+      "recommendation": "Review canonical/redirect impact; no independent content."
+    },
+    {
+      "url": "/compare-text-documents",
+      "status": "REVIEW",
+      "implied_intent": "Compare documents",
+      "actual_behavior": "Text-only inputs",
+      "recommendation": "No document-upload promise; review redirect/noindex."
+    }
+  ],
+  "technical_seo": {
+    "canonical_host_recommendation": "https://www.wordscompare.com; verify production TLS/redirect behavior before implementation.",
+    "canonical_policy": "Self-canonical approved tool/category/guide/info pages. Comparison aliases need individual impact review and one eventual /text-comparison target. Keep distinct conversion directions separate when behavior differs.",
+    "sitemap": "Dynamic /sitemap.xml currently fails XML parsing under local PHP CLI and omits route families. Repair and validate before relying on it. Include only approved canonical indexable routes; exclude query search, aliases, APIs, diagnostics, 404 and assets. Static sitemap.html is stale.",
+    "robots": "Review duplicate wildcard groups and sitemap declarations. Use one group and one absolute sitemap line after sitemap repair. Robots disallow is not a substitute for response-level noindex/auth/404 handling. No file changes in this phase.",
+    "social": "Shared header emits OG/Twitter metadata but configured assets/img/og-image.png is absent. Approve a real image before emitting its URL.",
+    "schema": {
+      "global": [
+        "Organization",
+        "WebSite"
+      ],
+      "tools": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "categories": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "substantive_guides": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "hubs_and_legal": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "faqpage": "Do not add by default; only genuine visible FAQ content after policy and accuracy review.",
+      "prohibited_without_evidence": [
+        "Aggregate ratings",
+        "Reviews",
+        "Offers",
+        "Fake authors/dates"
+      ]
+    }
+  },
+  "internal_linking": [
+    {
+      "from": "Categories",
+      "to": "verified child tools",
+      "rule": "Resolve the 59 omitted tools, then make category, search and route visibility consistent."
+    },
+    {
+      "from": "JSON Formatter",
+      "to": [
+        "/json-viewer",
+        "/text-comparison",
+        "/guides/format-json-online",
+        "/guides/validate-json"
+      ],
+      "rule": "Describe JSON comparison as text-only after formatting; distinguish syntax from schema validation."
+    },
+    {
+      "from": "Text Comparison",
+      "to": [
+        "/case-converter",
+        "/word-counter",
+        "/find-replace-text",
+        "/remove-extra-spaces"
+      ],
+      "rule": "Use contextual anchors; one canonical page for aliases."
+    },
+    {
+      "from": "Base64 Encoder",
+      "to": [
+        "/jwt-decoder",
+        "/guides/base64-vs-encryption",
+        "/guides/decode-jwt-token"
+      ],
+      "rule": "State Base64 is not encryption."
+    },
+    {
+      "from": "PDF tools",
+      "to": [
+        "/merge-pdf",
+        "/split-pdf",
+        "/reorder-pdf-pages",
+        "/delete-pdf-pages"
+      ],
+      "rule": "Link related workflows only after processing behavior is verified."
+    },
+    {
+      "from": "Calculator families",
+      "to": "related calculators",
+      "rule": "Cross-link only where actual inputs/results complement; keep India tax and general loan assumptions distinct."
+    },
+    {
+      "from": "Guides",
+      "to": "tools used in the documented steps",
+      "rule": "Repair guide resolver/path behavior and ensure steps match current UI."
+    },
+    {
+      "from": "Converters",
+      "to": "inverse direction pages",
+      "rule": "Use explicit source-to-target anchors and verified direction-specific formats."
+    }
+  ],
+  "ymyl_review": [
+    {
+      "route": "/income-tax-calculator",
+      "risk": "Tax",
+      "required_checks": [
+        "FY 2026-27 source and title",
+        "resident individual scope",
+        "old/new regimes",
+        "age slabs",
+        "rebate/marginal relief",
+        "4% cess",
+        "₹50 lakh cap",
+        "special-rate and surcharge exclusions"
+      ],
+      "references": [
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.incometaxindia.gov.in/tax-rates",
+        "https://www.incometaxindia.gov.in/income-tax-calculator"
+      ],
+      "publication_gate": "Validate live official URLs and calculations with qualified review."
+    },
+    {
+      "route": "/tax-calculator",
+      "risk": "Tax",
+      "required_checks": [
+        "Page claims FY 2024-25",
+        "generic income/sales tax sliders conflict with India-specific description",
+        "decide replacement or consolidation"
+      ],
+      "references": [
+        "https://www.incometax.gov.in/iec/foportal/"
+      ],
+      "publication_gate": "Do not present as current tax calculation until reconciled."
+    },
+    {
+      "route": "/gst-calculator",
+      "risk": "Tax",
+      "required_checks": [
+        "Current rates",
+        "CGST/SGST/IGST scope",
+        "inclusive/exclusive formulas",
+        "remove unsupported ITC/reverse-charge content claims"
+      ],
+      "references": [
+        "https://cbic-gst.gov.in/",
+        "https://www.gst.gov.in/"
+      ],
+      "publication_gate": "Check official current rules/rates before publishing."
+    },
+    {
+      "routes": [
+        "/tds-calculator",
+        "/hra-calculator",
+        "/epf-calculator",
+        "/fd-calculator",
+        "/rd-calculator",
+        "/nps-calculator",
+        "/ppf-calculator",
+        "/sukanya-samriddhi-yojana-calculator"
+      ],
+      "risk": "Tax and financial",
+      "required_checks": [
+        "Rate/threshold",
+        "tax year/date",
+        "scheme rules",
+        "age/status assumptions",
+        "user-input vs fixed values"
+      ],
+      "references": [
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.epfindia.gov.in/",
+        "https://www.nsiindia.gov.in/"
+      ],
+      "publication_gate": "Date every statutory assumption; label results estimates, not advice."
+    },
+    {
+      "routes": [
+        "/emi-calculator",
+        "/cagr-calculator",
+        "/compound-interest-calculator",
+        "/investment-returns-calculator",
+        "/sip-calculator",
+        "/retirement-calculator",
+        "/loan-eligibility-calculator"
+      ],
+      "risk": "Financial",
+      "required_checks": [
+        "Formula",
+        "compounding/payment timing",
+        "fees/currency",
+        "rate source",
+        "assumptions and examples"
+      ],
+      "references": [
+        "https://www.rbi.org.in/"
+      ],
+      "publication_gate": "No guaranteed returns, lender approval, offers or personalized advice."
+    },
+    {
+      "route": "/bmi-calculator",
+      "risk": "Health",
+      "required_checks": [
+        "Adult/child scope",
+        "age/gender/activity field effect",
+        "interpretation",
+        "no diagnosis claim"
+      ],
+      "references": [
+        "https://www.cdc.gov/bmi/adult-calculator/index.html",
+        "https://www.nhs.uk/health-assessment-tools/calculate-your-body-mass-index/",
+        "https://www.nhlbi.nih.gov/calculate-your-bmi"
+      ],
+      "publication_gate": "Use qualified health review; no treatment advice."
+    },
+    {
+      "routes": [
+        "/jwt-decoder",
+        "/hash-generator",
+        "/password-generator"
+      ],
+      "risk": "Security",
+      "required_checks": [
+        "Decoder is not signature verification",
+        "hash is not encryption",
+        "RNG/entropy and credential handling before secure-password claims"
+      ],
+      "publication_gate": "Do not make authenticity, confidentiality or security guarantees without technical verification."
+    }
+  ],
+  "noindex_review_resources": [
+    {
+      "url": "/search.php?q=...",
+      "type": "JSON search endpoint",
+      "recommendation": "Review response headers/body and query handling; not a landing page."
+    },
+    {
+      "url": "/sitemap.xml",
+      "type": "XML sitemap endpoint",
+      "recommendation": "Repair XML first; crawler resource, not a landing page."
+    },
+    {
+      "url": "/sitemap.html",
+      "type": "Stale static HTML sitemap",
+      "recommendation": "Review whether to refresh or retire; do not treat as ordinary content page."
+    },
+    {
+      "url": "/api/convert-pdf-to-word.php",
+      "type": "Conversion API",
+      "recommendation": "Review response indexing and security; exposed TLS verification issue is a blocker."
+    },
+    {
+      "url": "/api/convert-word-to-pdf.php",
+      "type": "Empty API endpoint",
+      "recommendation": "Review response/status and whether endpoint should remain public."
+    },
+    {
+      "url": "/api/convert-pdf-to-mobi.php",
+      "type": "Conversion API",
+      "recommendation": "Review response/indexing and runtime dependencies."
+    },
+    {
+      "url": "/api/test-pdf2docx.php",
+      "type": "Diagnostic endpoint",
+      "recommendation": "Review production exposure and access controls."
+    },
+    {
+      "url": "/404.php",
+      "type": "Error response",
+      "recommendation": "Verify HTTP 404 status and response-level index handling."
+    }
+  ],
+  "blockers_and_manual_verification": [
+    "Rotate ConvertAPI credentials found in client-delivered code; review disabled TLS peer/host checks in PDF-to-Word API.",
+    "Fix dynamic sitemap XML and verify complete intended URL set before indexation decisions.",
+    "Decide discoverability/category/search/indexation for 59 unregistered tools; registry absence alone does not prove orphan status.",
+    "Review traffic, backlinks and route behavior before consolidating any of ten aliases.",
+    "Resolve PDF-to-CSV UI/endpoint mismatch and PDF-to-Word advertised formats versus DOCX endpoint.",
+    "Verify PDF-to-Text OCR, JWT validation wording, Word Counter POST behavior and claims.",
+    "Validate tax/financial/health calculations using current official sources and qualified reviewers.",
+    "Check every file accept attribute against server/runtime validation and actual output.",
+    "Reconcile privacy, free, no-signup, browser-only, deletion and security claims with real processing.",
+    "Verify missing contact form handler, stale HTML sitemap and absent default OG image.",
+    "Production crawl must check status, canonical, rendered metadata, robots, redirects, schema, links and mobile layout."
+  ],
+  "implementation_checklist": [
+    "Complete security remediation and processing architecture review.",
+    "Repair and validate sitemap and production host.",
+    "Resolve tool registry and all alias decisions.",
+    "Fix feature/output mismatches and confirm formats.",
+    "Complete YMYL, privacy/legal and factual review.",
+    "Approve a real social-card image and confirm rendered metadata.",
+    "Write/implement approved copy only after gates; add visible FAQ/schema only where accurate.",
+    "Run production crawl and manual tool tests before release."
+  ]
+}

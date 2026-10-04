@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-03",
+  "files_changed": [
+    "api/convert-pdf-to-word.php",
+    "api/convertapi-proxy.php",
+    "sitemap.php",
+    "robots.txt",
+    ".htaccess",
+    "index.php",
+    "views/about.php",
+    "views/contact.php",
+    "views/privacy.php",
+    "views/disclaimer.php",
+    "llms.txt",
+    "views/tools/excel-to-pdf.php",
+    "views/tools/word-to-pdf.php",
+    "views/tools/csv-to-pdf.php",
+    "views/tools/pdf-to-csv.php",
+    "views/tools/pdf-to-excel.php",
+    "views/tools/pdf-to-ppt.php"
+  ],
+  "security": {
+    "credential_exposure": "Fixed by removing hard-coded ConvertAPI key values from browser scripts and moving the secret to the server environment variable CONVERTAPI_SECRET.",
+    "tls_verification": "Corrected to secure validation; TLS verification is enabled and no longer disabled in the server code path.",
+    "store_file_behavior": "Retained because it is part of the existing external processing flow and not a secret-handling issue."
+  },
+  "sitemap": {
+    "xml_valid": true,
+    "literal_backslash_n": false,
+    "duplicate_urls": false,
+    "included_urls": [
+      "https://www.wordscompare.com/",
+      "https://www.wordscompare.com/about",
+      "https://www.wordscompare.com/contact",
+      "https://www.wordscompare.com/privacy",
+      "https://www.wordscompare.com/disclaimer",
+      "https://www.wordscompare.com/guides",
+      "https://www.wordscompare.com/json-formatter",
+      "https://www.wordscompare.com/base64-encoder",
+      "https://www.wordscompare.com/url-encoder",
+      "https://www.wordscompare.com/text-comparison",
+      "https://www.wordscompare.com/case-converter",
+      "https://www.wordscompare.com/find-replace-text",
+      "https://www.wordscompare.com/remove-extra-spaces",
+      "https://www.wordscompare.com/reverse-text",
+      "https://www.wordscompare.com/text-to-slug",
+      "https://www.wordscompare.com/word-counter"
+    ],
+    "excluded_categories": [
+      "api endpoints",
+      "search endpoints",
+      "diagnostic pages",
+      "temporary or test resources",
+      "legacy aliases",
+      "unregistered tool routes"
+    ]
+  },
+  "robots": {
+    "wildcard_groups": 1,
+    "sitemap_declarations": 1,
+    "findings": [
+      "Single wildcard group remains in place.",
+      "One canonical sitemap URL is declared.",
+      "Private/internal directories remain blocked while public application routes remain allowed."
+    ]
+  },
+  "aliases": [
+    {
+      "alias": "/compare-two-text-files-online",
+      "status": "redirect",
+      "destination": "/text-comparison"
+    },
+    {
+      "alias": "/compare-text-line-by-line",
+      "status": "redirect",
+      "destination": "/text-comparison"
+    },
+    {
+      "alias": "/compare-json-files-online",
+      "status": "redirect",
+      "destination": "/text-comparison"
+    },
+    {
+      "alias": "/compare-xml-files-online",
+      "status": "redirect",
+      "destination": "/text-comparison"
+    },
+    {
+      "alias": "/compare-html-files-online",
+      "status": "redirect",
+      "destination": "/text-comparison"
+    },
+    {
+      "alias": "/compare-css-files-online",
+      "status": "redirect",
+      "destination": "/text-comparison"
+    },
+    {
+      "alias": "/compare-code-files-online",
+      "status": "redirect",
+      "destination": "/text-comparison"
+    },
+    {
+      "alias": "/online-text-diff-tool",
+      "status": "redirect",
+      "destination": "/text-comparison"
+    },
+    {
+      "alias": "/text-difference-checker",
+      "status": "redirect",
+      "destination": "/text-comparison"
+    },
+    {
+      "alias": "/compare-text-documents",
+      "status": "redirect",
+      "destination": "/text-comparison"
+    }
+  ],
+  "brand_cleanup": [
+    "views/about.php",
+    "views/contact.php",
+    "views/privacy.php",
+    "views/disclaimer.php"
+  ],
+  "claim_cleanup": [
+    "index.php",
+    "llms.txt"
+  ],
+  "validation": {
+    "php_syntax": {
+      "api/convert-pdf-to-word.php": "No syntax errors detected",
+      "api/convertapi-proxy.php": "No syntax errors detected",
+      "sitemap.php": "No syntax errors detected",
+      "index.php": "No syntax errors detected",
+      "views/about.php": "No syntax errors detected",
+      "views/contact.php": "No syntax errors detected",
+      "views/privacy.php": "No syntax errors detected",
+      "views/disclaimer.php": "No syntax errors detected"
+    },
+    "route_status": {
+      "http://localhost/v1.0.3/": "200 OK",
+      "http://localhost/v1.0.3/text-comparison": "200 OK",
+      "http://localhost/v1.0.3/compare-two-text-files-online": "301 Moved Permanently",
+      "http://localhost/v1.0.3/sitemap.xml": "200 OK"
+    }
+  },
+  "remaining_issues": []
+}

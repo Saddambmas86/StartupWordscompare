@@ -1,0 +1,174 @@
+{
+  "audit_date": "2026-10-03",
+  "scope": "Static source inspection and local PHP runtime validation of the current workspace; no code changes made.",
+  "status": "BLOCKED_BY_CRITICAL_ISSUES",
+  "findings": [
+    {
+      "severity": "CRITICAL",
+      "category": "security",
+      "page_or_file": "api/convert-pdf-to-word.php",
+      "description": "Fallback ConvertAPI secret remains in server-side PHP source and TLS verification is disabled.",
+      "evidence": [
+        "api/convert-pdf-to-word.php: fallback secret assignment is present",
+        "api/convert-pdf-to-word.php: CURLOPT_SSL_VERIFYPEER is set to false",
+        "api/convert-pdf-to-word.php: CURLOPT_SSL_VERIFYHOST is set to false"
+      ],
+      "status": "SOURCE_VERIFIED",
+      "recommended_action": "Rotate/revoke the current ConvertAPI secret, move it to environment variables, and re-enable TLS verification."
+    },
+    {
+      "severity": "HIGH",
+      "category": "sitemap",
+      "page_or_file": "sitemap.php",
+      "description": "The dynamic sitemap generator still emits malformed XML containing literal escaped newline sequences.",
+      "evidence": [
+        "sitemap.php: output begins with echo '\\'<?xml version=\"1.0\" encoding=\"UTF-8\"?>\\n';'",
+        "sitemap.php: subsequent echo statements also use literal \\n sequences",
+        "Runtime validation: the emitted XML was not accepted as clean XML output"
+      ],
+      "status": "SOURCE_VERIFIED",
+      "recommended_action": "Replace the escaped newline output with proper XML generation and validate the generated sitemap as XML before publishing."
+    },
+    {
+      "severity": "HIGH",
+      "category": "robots",
+      "page_or_file": "robots.txt",
+      "description": "The current robots.txt contains duplicate wildcard groups and duplicate sitemap declarations.",
+      "evidence": [
+        "robots.txt: User-agent: * appears twice",
+        "robots.txt: Sitemap appears twice",
+        "robots.txt: Allow and Disallow rules are duplicated across groups"
+      ],
+      "status": "SOURCE_VERIFIED",
+      "recommended_action": "Consolidate the robots directives to one valid User-agent block and one canonical sitemap declaration."
+    },
+    {
+      "severity": "HIGH",
+      "category": "canonicalization",
+      "page_or_file": ".htaccess",
+      "description": "The text-comparison aliases remain separate routes and are not consolidated to a single canonical target.",
+      "evidence": [
+        ".htaccess: alias rewrite list includes 10 routes rewriting to views/tools/text-comparison.php",
+        ".htaccess: no single canonical target rule is present for the alias set"
+      ],
+      "status": "SOURCE_VERIFIED",
+      "recommended_action": "Choose a canonical route and redirect aliases to it or explicitly decide that each alias is an indexable landing page."
+    },
+    {
+      "severity": "HIGH",
+      "category": "route_policy",
+      "page_or_file": "views/tools",
+      "description": "The site still has a large number of tool routes outside the registry and still requires a route decision for the 59 unregistered routes.",
+      "evidence": [
+        "includes/category-data.php: smaller registry than the tool directory",
+        "views/tools: many tool PHP files exist outside the registry",
+        "Current source does not conclusively decide indexation status for all remaining routes"
+      ],
+      "status": "SOURCE_VERIFIED",
+      "recommended_action": "Document the routing policy: register, redirect, or decommission each remaining route."
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "branding",
+      "page_or_file": "views/about.php",
+      "description": "Current source still contains Snapy Tools brand language in legal/info pages.",
+      "evidence": [
+        "views/about.php: page_description still says Snapy Tools",
+        "views/contact.php: page_description still says Snapy Tools",
+        "views/privacy.php: page_description still says Snapy Tools",
+        "views/disclaimer.php: page_description still says Snapy Tools"
+      ],
+      "status": "SOURCE_VERIFIED",
+      "recommended_action": "Replace the stale Snapy Tools brand references with WordsCompare and validate all legal/about text."
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "claim_alignment",
+      "page_or_file": "llms.txt",
+      "description": "Current browser-only and no-upload claims are not wholly aligned with the current conversion architecture and external API use patterns.",
+      "evidence": [
+        "llms.txt: describes the toolkit as browser-based",
+        "api/convert-pdf-to-word.php: direct external API conversion processing exists",
+        "Multiple tool pages invoke external ConvertAPI flows in frontend JavaScript"
+      ],
+      "status": "SOURCE_VERIFIED",
+      "recommended_action": "Reconcile all browser-only and privacy phrasing with actual processing paths before publication."
+    },
+    {
+      "severity": "LOW",
+      "category": "internal_links",
+      "page_or_file": "includes/tool-seo.php",
+      "description": "Related-guide output is source-correct but still heuristic; it can be incomplete when slug matching is weak.",
+      "evidence": [
+        "includes/tool-seo.php: guide_dir = __DIR__ . '/../views/guides'",
+        "includes/tool-seo.php: file_exists check is present before rendering guide links",
+        "Guide matching still depends on slug/keyword overlap rather than a canonical guide map"
+      ],
+      "status": "SOURCE_VERIFIED",
+      "recommended_action": "Add an explicit guide map or canonical lookup table if the related-guide section needs deterministic behavior."
+    },
+    {
+      "severity": "LOW",
+      "category": "social_metadata",
+      "page_or_file": "includes/header.php",
+      "description": "The previously missing OG/Twitter fallback image issue has been resolved in current source.",
+      "evidence": [
+        "includes/header.php: og:image points to assets/img/wordscompare-mark.svg",
+        "includes/header.php: twitter:image points to assets/img/wordscompare-mark.svg",
+        "assets/img/wordscompare-mark.svg exists in the workspace"
+      ],
+      "status": "SOURCE_VERIFIED",
+      "recommended_action": "Keep the current existing asset as the fallback and verify it remains present in deployment."
+    },
+    {
+      "severity": "LOW",
+      "category": "related_guides",
+      "page_or_file": "includes/tool-seo.php",
+      "description": "The related-guide lookup path was corrected in the current source to use the actual guides directory.",
+      "evidence": [
+        "includes/tool-seo.php: $guide_dir = __DIR__ . '/../views/guides'",
+        "includes/tool-seo.php: is_dir($guide_dir) verification is present",
+        "includes/tool-seo.php: file_exists($gpath) guard is present before rendering guide links"
+      ],
+      "status": "SOURCE_VERIFIED",
+      "recommended_action": "Retain this pattern and continue to validate guide matching in live output when the next implementation pass occurs."
+    },
+    {
+      "severity": "LOW",
+      "category": "php_syntax",
+      "page_or_file": "includes/header.php",
+      "description": "The shared SEO files and all 10 approved page templates pass PHP lint in the current source.",
+      "evidence": [
+        "includes/header.php: No syntax errors detected",
+        "includes/tool-seo.php: No syntax errors detected",
+        "views/tools/json-formatter.php: No syntax errors detected",
+        "views/tools/base64-encoder.php: No syntax errors detected",
+        "views/tools/url-encoder.php: No syntax errors detected",
+        "views/tools/text-comparison.php: No syntax errors detected",
+        "views/tools/case-converter.php: No syntax errors detected",
+        "views/tools/find-replace-text.php: No syntax errors detected",
+        "views/tools/remove-extra-spaces.php: No syntax errors detected",
+        "views/tools/reverse-text.php: No syntax errors detected",
+        "views/tools/text-to-slug.php: No syntax errors detected",
+        "views/tools/word-counter.php: No syntax errors detected"
+      ],
+      "status": "RUNTIME_VERIFIED",
+      "recommended_action": "Keep this syntax validation as part of future release checks."
+    }
+  ],
+  "resolved_since_phase_4": [
+    "The generic filler-description logic is no longer present in the current version of includes/header.php.",
+    "The missing og-image fallback has been resolved to the existing asset at assets/img/wordscompare-mark.svg.",
+    "The guide directory use in includes/tool-seo.php now checks views/guides and verifies file existence before emitting guide links."
+  ],
+  "still_open": [
+    "ConvertAPI secret and TLS issue in api/convert-pdf-to-word.php",
+    "Malformed dynamic sitemap in sitemap.php",
+    "Duplicate robots rules in robots.txt",
+    "Alias canonicalization in .htaccess",
+    "59-route registry and indexation policy",
+    "Brand copy mismatch in legal/info pages",
+    "Claim alignment across llms.txt and browser-only wording",
+    "Live route validation not yet completed"
+  ]
+}

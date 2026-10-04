@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /views/
+Disallow: /includes/
+Disallow: /tmp/
+Disallow: /test_pdf/
+Disallow: /vendor/
+Disallow: /api/
+Allow: /
+
+Sitemap: https://www.wordscompare.com/sitemap.xml

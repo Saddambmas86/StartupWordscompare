@@ -1,0 +1,223 @@
+{
+  "audit": {
+    "project": "WordsCompare",
+    "workspace": "c:/xampp/htdocs/v1.0.3",
+    "date": "2026-10-02",
+    "method": "Static source audit of local workspace before the tool cleanup recorded in post_cleanup",
+    "live_verification": "Needs verification: no production crawl, browser rendering, HTTP header check, Search Console/Bing data, or CWV run was performed."
+  },
+  "summary": {
+    "primary_html_templates": 152,
+    "routed_html_urls_including_text_comparison_aliases": 162,
+    "additional_static_html_sitemap": 1,
+    "browser_visible_html_addresses_counted": 163,
+    "tool_view_files_and_routes": 123,
+    "distinct_tools_in_category_registry": 49,
+    "category_registry_references": 104,
+    "tool_views_not_in_category_registry": 74,
+    "category_pages": 9,
+    "guide_files_and_routes": 15,
+    "informational_pages": 4,
+    "text_comparison_alias_routes": 10,
+    "matching_tool_content_includes": 116,
+    "tool_views_without_matching_content_include": 7,
+    "matching_tool_content_fragments_with_faq": 46,
+    "critical_issues": 1,
+    "high_issues": 5,
+    "medium_issues": 7,
+    "low_issues": 3
+  },
+  "post_cleanup": {
+    "removed_tool_views": 15,
+    "removed_matching_content_fragments": 15,
+    "remaining_tool_views": 108,
+    "remaining_category_registry_tools": 49,
+    "remaining_tool_views_not_in_category_registry": 59,
+    "remaining_primary_html_templates": 137,
+    "remaining_routed_html_urls_including_aliases": 147,
+    "remaining_content_fragments_with_faq_for_matched_tools": 41,
+    "removed_slugs": ["gratuity-calculator", "inflation-calculator", "lumpsum-calculator", "nsc-calculator", "pdf-to-svg", "pdf-to-tiff", "png-to-pdf", "reverse-mortgage-calculator", "simple-interest-calculator", "step-up-sip-calculator", "swp-calculator", "timesheet-calculator", "unlock-pdf", "webp-to-pdf", "xml-to-pdf"],
+    "reference_check": "No exact references to removed slugs remain in homepage, shared navigation/footer, category, guide, or remaining content-fragment sources."
+  },
+  "architecture": {
+    "application_type": "Custom PHP application with Apache rewrites and JavaScript-enhanced tools",
+    "framework_or_cms": "Not present / not detected in the inspected workspace",
+    "local_php_cli": "8.2.12 (XAMPP bundled); production version is Needs verification",
+    "minimum_php_requirement_declared": false,
+    "entry_point": "index.php",
+    "router": ".htaccess",
+    "shared_header": "includes/header.php",
+    "shared_footer": "includes/footer.php",
+    "category_registry": "includes/category-data.php",
+    "category_renderer": "includes/category-template.php",
+    "tool_seo_helper": "includes/tool-seo.php (conditionally included by includes/header.php)",
+    "database": "No DB connection/persistence code found in the inspected PHP sources; browser localStorage is used by some tools.",
+    "build_and_deployment": {
+      "apache_config": ".htaccess",
+      "composer_manifest": "Not present",
+      "application_ci_config": "Not present",
+      "root_build_manifest": "Not present",
+      "test_pdf_package": "test_pdf/package.json; only pdf-lib-plus-encrypt dependency and placeholder failing test script"
+    },
+    "third_party_families_seen": [
+      "Bootstrap",
+      "Font Awesome",
+      "SweetAlert2",
+      "PDF.js",
+      "SheetJS/XLSX",
+      "PDF-Lib",
+      "jsPDF",
+      "Chart.js",
+      "ConvertAPI",
+      "Google Analytics/Tag Manager",
+      "Google AdSense"
+    ]
+  },
+  "routes": {
+    "primary_pages": [
+      {"url": "/", "source": "index.php", "type": "homepage", "indexable_intent": true},
+      {"url": "/about", "source": "views/about.php", "type": "informational", "indexable_intent": true},
+      {"url": "/contact", "source": "views/contact.php", "type": "informational", "indexable_intent": true},
+      {"url": "/privacy", "source": "views/privacy.php", "type": "legal", "indexable_intent": true},
+      {"url": "/disclaimer", "source": "views/disclaimer.php", "type": "legal", "indexable_intent": true}
+    ],
+    "category_routes": [
+      {"url": "/developer-tools", "source": "views/category/developer-tools.php"},
+      {"url": "/qa-tools", "source": "views/category/qa-tools.php"},
+      {"url": "/api-testing-tools", "source": "views/category/api-testing-tools.php"},
+      {"url": "/devops-tools", "source": "views/category/devops-tools.php"},
+      {"url": "/json-tools", "source": "views/category/json-tools.php"},
+      {"url": "/text-tools", "source": "views/category/text-tools.php"},
+      {"url": "/pdf-tools", "source": "views/category/pdf-tools.php"},
+      {"url": "/calculators", "source": "views/category/calculators.php"},
+      {"url": "/converters", "source": "views/category/converters.php"}
+    ],
+    "guide_routes": [
+      {"url": "/guides", "source": "views/guides/index.php", "kind": "guide index"},
+      {"url": "/guides/api-testing", "source": "views/guides/api-testing.php"},
+      {"url": "/guides/base64-vs-encryption", "source": "views/guides/base64-vs-encryption.php"},
+      {"url": "/guides/compare-api-responses", "source": "views/guides/compare-api-responses.php"},
+      {"url": "/guides/compare-json-objects", "source": "views/guides/compare-json-objects.php"},
+      {"url": "/guides/decode-jwt-token", "source": "views/guides/decode-jwt-token.php"},
+      {"url": "/guides/developers", "source": "views/guides/developers.php", "kind": "guide hub"},
+      {"url": "/guides/devops", "source": "views/guides/devops.php", "kind": "guide hub"},
+      {"url": "/guides/format-json-online", "source": "views/guides/format-json-online.php"},
+      {"url": "/guides/generate-test-data", "source": "views/guides/generate-test-data.php"},
+      {"url": "/guides/http-status-codes-api-testing", "source": "views/guides/http-status-codes-api-testing.php"},
+      {"url": "/guides/qa", "source": "views/guides/qa.php", "kind": "guide hub"},
+      {"url": "/guides/test-jwt-authentication", "source": "views/guides/test-jwt-authentication.php"},
+      {"url": "/guides/validate-json", "source": "views/guides/validate-json.php"},
+      {"url": "/guides/validate-json-api-responses", "source": "views/guides/validate-json-api-responses.php"}
+    ],
+    "tool_route_pattern": "/{tool-slug}",
+    "tool_source_pattern": "views/tools/{tool-slug}.php",
+    "tool_slugs_additional": ["hash-generator", "url-encoder"],
+    "tool_slug_list_semantics": "The complete set is tool_slugs plus tool_slugs_additional.",
+    "tool_slugs": [
+      "add-page-number-to-pdf", "add-watermark-to-pdf", "age-calculator", "apy-calculator", "base64-encoder", "bmi-calculator", "brokerage-calculator", "cagr-calculator", "calendar-generator", "car-loan-emi-calculator", "case-converter", "color-picker", "compound-interest-calculator", "compress-pdf", "csv-to-pdf", "delete-pdf-pages", "discount-calculator", "dwg-to-pdf", "emi-calculator", "epf-calculator", "epub-to-pdf", "excel-to-pdf", "fd-calculator", "find-replace-text", "flat-vs-reducing-rate-calculator", "flatten-pdf", "gratuity-calculator", "gst-calculator", "home-equity-loan-calculator", "home-loan-emi-calculator", "hra-calculator", "html-to-pdf", "income-tax-calculator", "inflation-calculator", "investment-returns-calculator", "ipynb-to-pdf", "jfif-to-pdf", "jpg-to-pdf", "json-to-pdf", "json-formatter", "json-viewer", "jwt-decoder", "loan-eligibility-calculator", "lock-pdf", "lumpsum-calculator", "margin-calculator", "markdown-to-pdf", "merge-pdf", "mobi-to-pdf", "mutual-fund-returns-calculator", "nps-calculator", "nsc-calculator", "offer-letter-generator", "password-generator", "payroll-sheet-generator", "pdf-editor", "pdf-metadata-editor", "pdf-to-audio", "pdf-to-csv", "pdf-to-epub", "pdf-to-excel", "pdf-to-html", "pdf-to-ipynb", "pdf-to-jfif", "pdf-to-jpg", "pdf-to-json", "pdf-to-markdown", "pdf-to-mobi", "pdf-to-ocr", "pdf-to-png", "pdf-to-ppt", "pdf-to-psd", "pdf-to-svg", "pdf-to-text", "pdf-to-tiff", "pdf-to-webp", "pdf-to-word", "pdf-to-xml", "percentage-calculator", "personal-loan-calculator", "png-to-pdf", "pnr-to-pdf", "ppf-calculator", "ppt-to-pdf", "pto-calculator", "qr-code-generator", "rd-calculator", "refinance-calculator", "remove-extra-spaces", "reorder-pdf-pages", "repair-pdf", "retirement-calculator", "reverse-mortgage-calculator", "reverse-text", "rotate-pdf", "rtf-to-pdf", "salary-calculator", "scientific-calculator", "shreelipi-to-pdf", "simple-calculator", "simple-interest-calculator", "sip-calculator", "speech-to-pdf", "split-pdf", "step-up-sip-calculator", "sukanya-samriddhi-yojana-calculator", "svg-to-pdf", "swp-calculator", "tax-calculator", "tds-calculator", "text-comparison", "text-to-pdf", "text-to-slug", "tiff-to-pdf", "timesheet-calculator", "unit-converter", "unlock-pdf", "webp-to-pdf", "word-counter", "word-to-pdf", "xml-to-pdf"
+    ],
+    "text_comparison_aliases": [
+      "/compare-two-text-files-online", "/compare-text-line-by-line", "/compare-json-files-online", "/compare-xml-files-online", "/compare-html-files-online", "/compare-css-files-online", "/compare-code-files-online", "/online-text-diff-tool", "/text-difference-checker", "/compare-text-documents"
+    ],
+    "other_public_resources": [
+      {"url": "/sitemap.html", "source": "sitemap.html", "type": "static HTML sitemap", "indexability": "No robots/canonical tags in source; stale snapshot"},
+      {"url": "/sitemap.xml", "source": "sitemap.php via rewrite", "type": "XML sitemap", "indexability": "Crawler resource; dynamic output fails XML parsing"},
+      {"url": "/search.php?q=...", "source": "search.php", "type": "JSON search endpoint", "indexable_landing_page": false},
+      {"url": "/api/convert-pdf-to-word.php", "source": "api/convert-pdf-to-word.php", "type": "JSON conversion endpoint"},
+      {"url": "/api/convert-word-to-pdf.php", "source": "api/convert-word-to-pdf.php", "type": "empty PHP endpoint"},
+      {"url": "/api/convert-pdf-to-mobi.php", "source": "api/convert-pdf-to-mobi.php", "type": "file conversion endpoint"},
+      {"url": "/api/test-pdf2docx.php", "source": "api/test-pdf2docx.php", "type": "diagnostic endpoint"},
+      {"url": "/robots.txt", "source": "robots.txt", "type": "crawler directives"},
+      {"url": "/llms.txt", "source": "llms.txt", "type": "descriptive text resource"},
+      {"url": "/404.php", "source": "404.php", "type": "404 response; not a landing page"}
+    ]
+  },
+  "tool_inventory": {
+    "source_of_truth": "Pre-cleanup baseline: each page-specific name, title, description, H1, controls, and code path lived in its views/tools/{slug}.php source file. The list below is the baseline file list; post_cleanup records files removed afterward.",
+    "per_page_metadata_scan": {"page_title_declared": 123, "page_description_declared": 123, "h1_present": 123, "duplicate_source_title_groups": 0, "duplicate_source_description_groups": 0},
+    "interaction_fields": {
+      "input_format": "Needs verification per tool source; controls vary between text, numeric/date fields, and file uploads.",
+      "output_format": "Needs verification per tool source; some tools return text, some generate/download files, and some show previews.",
+      "supported_file_formats": "Needs verification per tool source; inspect input accept attributes and runtime validation.",
+      "options_and_limits": "Needs verification per tool source and runtime; do not infer from URL/title.",
+      "upload_and_download": "Varies; code contains both upload/download workflows and non-file tools.",
+      "processing_location": "Varies; browser JavaScript, direct third-party API requests, and server/API processing are all present.",
+      "faq_and_links": "116 matching long-form content includes; 46 matching includes have FAQ markup. Tool SEO helper adds related tools conditionally."
+    },
+    "tools_not_in_category_registry": [
+      "apy-calculator", "brokerage-calculator", "calendar-generator", "car-loan-emi-calculator", "compress-pdf", "csv-to-pdf", "dwg-to-pdf", "epf-calculator", "epub-to-pdf", "fd-calculator", "flat-vs-reducing-rate-calculator", "flatten-pdf", "gratuity-calculator", "home-equity-loan-calculator", "home-loan-emi-calculator", "hra-calculator", "inflation-calculator", "investment-returns-calculator", "ipynb-to-pdf", "jfif-to-pdf", "loan-eligibility-calculator", "lumpsum-calculator", "margin-calculator", "markdown-to-pdf", "mobi-to-pdf", "mutual-fund-returns-calculator", "nps-calculator", "nsc-calculator", "offer-letter-generator", "payroll-sheet-generator", "pdf-editor", "pdf-to-csv", "pdf-to-epub", "pdf-to-ipynb", "pdf-to-jfif", "pdf-to-markdown", "pdf-to-mobi", "pdf-to-png", "pdf-to-ppt", "pdf-to-psd", "pdf-to-svg", "pdf-to-text", "pdf-to-tiff", "pdf-to-webp", "pdf-to-xml", "percentage-calculator", "personal-loan-calculator", "png-to-pdf", "pnr-to-pdf", "ppt-to-pdf", "pto-calculator", "rd-calculator", "refinance-calculator", "reverse-mortgage-calculator", "rotate-pdf", "rtf-to-pdf", "salary-calculator", "scientific-calculator", "shreelipi-to-pdf", "simple-interest-calculator", "speech-to-pdf", "split-pdf", "step-up-sip-calculator", "sukanya-samriddhi-yojana-calculator", "svg-to-pdf", "swp-calculator", "tax-calculator", "tds-calculator", "text-to-pdf", "tiff-to-pdf", "timesheet-calculator", "unlock-pdf", "webp-to-pdf", "xml-to-pdf"
+    ],
+    "tool_views_without_matching_content_include": ["base64-encoder", "hash-generator", "json-formatter", "json-viewer", "jwt-decoder", "text-comparison", "url-encoder"],
+    "known_processing_exceptions": [
+      {"tools": ["csv-to-pdf", "excel-to-pdf", "pdf-to-csv", "pdf-to-excel", "pdf-to-ppt", "word-to-pdf"], "processing": "Browser sends file directly to ConvertAPI; client-delivered credentials found", "limits": "Needs verification"},
+      {"tools": ["pdf-to-word"], "processing": "Browser posts to api/convert-pdf-to-word.php; PHP forwards to ConvertAPI and returns a cloud download URL", "options": "UI exposes page range, output format, content/layout mode, preserve formatting; effective output behavior needs verification"},
+      {"tools": ["pdf-to-mobi"], "processing": "A server endpoint exists and uses temporary files plus Calibre/Python when available; actual tool-page wiring needs verification"},
+      {"tools": ["word-to-pdf"], "processing": "Direct browser-to-ConvertAPI request; the similarly named PHP API file is empty"}
+    ],
+    "tool_metadata_values": "Exact title/description/H1 strings remain in each linked page source; all three fields are declared/present on all 123 tool views."
+  },
+  "seo_metadata": {
+    "shared_header": "includes/header.php",
+    "robots_meta": "index, follow on shared-header HTML pages",
+    "canonical": "Generated from canonical_base_url plus requested path unless canonical_url is set; host is derived from HTTP_HOST.",
+    "open_graph": "Global OG tags; default image is assets/img/og-image.png, not found in workspace.",
+    "twitter_x": "Global Twitter card/title/description/image tags; same missing default image.",
+    "schema": {
+      "global": ["Organization", "WebSite"],
+      "guides": ["Article for guide article routes", "BreadcrumbList for guide routes"],
+      "categories": ["BreadcrumbList"],
+      "tools": ["WebPage", "BreadcrumbList when shared tool SEO include resolves"],
+      "faqpage": "Not present"
+    },
+    "breadcrumbs": "Visible/category/tool helper behavior is template-conditional; guide visible breadcrumb coverage needs verification.",
+    "source_page_metadata_counts": {"tools_titles_descriptions_h1": "123/123/123", "guide_titles_descriptions_h1": "15/15/15", "category_titles_descriptions": "9/9"},
+    "description_generation": "Header pads short descriptions with generic appended phrases and truncates long values; inspect rendered description rather than source variable alone."
+  },
+  "technical_findings": [
+    {"id": "T-01", "severity": "High", "finding": "Dynamic sitemap output is invalid XML under local PHP CLI execution.", "evidence": [".htaccess", "sitemap.php"]},
+    {"id": "T-02", "severity": "High", "finding": "Sitemap sources are inconsistent and omit route families; static XML has 123 URLs, HTML snapshot states 114 pages, and dynamic generator omits guides/aliases.", "evidence": ["sitemap.xml", "sitemap.html", "sitemap.php"]},
+    {"id": "T-03", "severity": "High", "finding": "Ten legacy comparison aliases can use distinct self-canonicals for identical content.", "evidence": [".htaccess", "includes/header.php"]},
+    {"id": "T-04", "severity": "High", "finding": "Default Open Graph/Twitter image path does not exist in workspace.", "evidence": ["includes/header.php", "assets/img/"]},
+    {"id": "T-05", "severity": "Critical", "finding": "ConvertAPI secrets are exposed in client-delivered scripts; server-side PDF-to-Word source also disables TLS verification.", "evidence": ["views/tools/csv-to-pdf.php", "views/tools/excel-to-pdf.php", "views/tools/pdf-to-csv.php", "views/tools/pdf-to-excel.php", "views/tools/pdf-to-ppt.php", "views/tools/word-to-pdf.php", "api/convert-pdf-to-word.php"]},
+    {"id": "T-06", "severity": "Medium", "finding": "Contact form action targets a file not present in workspace; word-to-PDF API file is empty.", "evidence": ["views/contact.php", "api/convert-word-to-pdf.php"]},
+    {"id": "T-07", "severity": "Low", "finding": "robots.txt has duplicate wildcard groups and duplicate sitemap directives.", "evidence": ["robots.txt"]}
+  ],
+  "content_findings": [
+    {"id": "Q-01", "severity": "High", "finding": "74 tool view routes are not in category-data.php; category pages and search.php use that registry.", "evidence": ["includes/category-data.php", "includes/category-template.php", "search.php"]},
+    {"id": "Q-02", "severity": "Medium", "finding": "Seven tool view pages do not include their matching long-form content file; only 46 matching fragments have FAQ markup.", "evidence": ["views/tools/", "views/content/"]},
+    {"id": "Q-03", "severity": "Medium", "finding": "Privacy/About/llms.txt claims need reconciliation with external and server-side conversion flows and analytics/ads scripts.", "evidence": ["views/privacy.php", "views/about.php", "llms.txt", "index.php", "api/"]},
+    {"id": "Q-04", "severity": "Medium", "finding": "Page descriptions for legal/info views still refer to Snapy Tools rather than WordsCompare.", "evidence": ["views/about.php", "views/contact.php", "views/privacy.php", "views/disclaimer.php"]},
+    {"id": "Q-05", "severity": "Medium", "finding": "Tool SEO related-guide resolver checks the wrong content path/name pattern for public guide routes.", "evidence": ["includes/tool-seo.php", "views/guides/"]},
+    {"id": "Q-06", "severity": "Medium", "finding": "PDF-to-CSV output route and PDF-to-Word output settings need reconciliation with actual converter request behavior.", "evidence": ["views/tools/pdf-to-csv.php", "views/tools/pdf-to-word.php", "api/convert-pdf-to-word.php"]},
+    {"id": "Q-07", "severity": "Low", "finding": "The /guides index links to four hubs but does not enumerate all 10 article routes.", "evidence": ["views/guides/index.php"]}
+  ],
+  "internal_link_findings": [
+    {"finding": "Category and search links come from the 49 distinct registered tool slugs; 74 tool files are omitted from those surfaces.", "status": "Verified from registry and file counts"},
+    {"finding": "Tool helper adds parent-category breadcrumbs and related-tool links when route matching succeeds; unregistered tools fall back to developer-tools.", "status": "Verified in source; rendered production behavior needs verification"},
+    {"finding": "Related guide links likely fail because helper looks for views/content/{slug}.php while guide routes are views/guides/{slug}.php and tool fragments use -content.php.", "status": "Verified path mismatch in source"},
+    {"finding": "Contact form posts to /includes/process_contact.php, which is absent.", "status": "Verified file search"},
+    {"finding": "Full orphan and broken-link classification needs rendered crawl/status checks.", "status": "Needs verification"}
+  ],
+  "priority_issues": {
+    "critical": ["C-01: ConvertAPI credentials are embedded in client-side tool scripts and should be treated as compromised."],
+    "high": ["H-01: Dynamic /sitemap.xml output is malformed XML.", "H-02: Sitemap coverage is incomplete and conflicting.", "H-03: 74 tool routes are omitted from category/search registry.", "H-04: Ten duplicate comparison aliases can self-canonicalize.", "H-05: Default OG/Twitter image is missing."],
+    "medium": ["M-01: Seven tools have no matching long-form content include; FAQ coverage is partial.", "M-02: Privacy/browser-only claims conflict with observed external/server processing.", "M-03: Legal/info metadata still names Snapy Tools.", "M-04: Contact form target is absent.", "M-05: Word-to-PDF API file is empty.", "M-06: Related-guide resolver uses the wrong directory/name pattern.", "M-07: PDF-to-CSV and PDF-to-Word output labels/settings need behavior verification."],
+    "low": ["L-01: Shared metadata builder mutates descriptions and emits raw keyword meta values.", "L-02: Duplicate wildcard robots groups/sitemap declarations.", "L-03: No root production dependency/runtime manifest was found."]
+  },
+  "content_classification": {
+    "homepage": "IMPROVE",
+    "tool_pages_with_matching_content": "KEEP / IMPROVE",
+    "tool_pages_without_matching_content_include": "EXPAND",
+    "category_pages": "EXPAND",
+    "guide_hubs_and_articles": "KEEP / EXPAND",
+    "about_contact_privacy_disclaimer": "REWRITE / REVIEW",
+    "sitemap_html": "NOINDEX / REVIEW",
+    "404": "NOINDEX / REVIEW",
+    "search_and_api_endpoints": "NOINDEX / REVIEW"
+  },
+  "audit_limits": [
+    "Local static source audit only; no production crawl or browser render.",
+    "Production PHP version, extensions, response headers, redirects, current indexation, traffic, backlinks, and CWV are Needs verification.",
+    "Per-tool controls, supported formats, limits, output behavior, and upload/download behavior must be confirmed in each page source and then runtime-tested before SEO copy is rewritten."
+  ]
+}

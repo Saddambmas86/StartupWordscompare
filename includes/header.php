@@ -60,30 +60,25 @@ if (preg_match('~(?:^|/)guides(?:/([a-z0-9-]+))?/?$~i', $request_path_only, $gui
 <head>
     <?php
     $seo_meta_title = trim((string) ($page_title ?? ''));
-    if ($seo_meta_title === '') {
-        $seo_meta_title = "$site_name - $default_title_suffix";
-        $seo_social_title = $site_name;
-    } else {
-        $seo_meta_title = preg_replace('/\s*(?:\||-|–|—)\s*' . preg_quote($site_name, '/') . '\s*$/iu', '', $seo_meta_title);
-        $title_suffix = ' | ' . $site_name;
-        if (mb_strlen($seo_meta_title . $title_suffix, 'UTF-8') > 60) {
-            $title_parts = preg_split('/\s+(?:-|–|—|:)\s+/u', $seo_meta_title, 2);
-            if (count($title_parts) > 1 && trim($title_parts[0]) !== '') {
-                $seo_meta_title = trim($title_parts[0]);
-            }
-            $max_title_length = 60 - mb_strlen($title_suffix, 'UTF-8');
-            if (mb_strlen($seo_meta_title, 'UTF-8') > $max_title_length) {
-                $seo_meta_title = mb_substr($seo_meta_title, 0, $max_title_length, 'UTF-8');
-                $last_space = mb_strrpos($seo_meta_title, ' ', 0, 'UTF-8');
-                if ($last_space !== false && $last_space > 0) {
-                    $seo_meta_title = mb_substr($seo_meta_title, 0, $last_space, 'UTF-8');
-                }
-            }
-        }
-        $seo_meta_title = trim($seo_meta_title) . $title_suffix;
-        $seo_social_title = $seo_meta_title;
-    }
 
+if ($seo_meta_title === '') {
+    $seo_meta_title = "$site_name - $default_title_suffix";
+    $seo_social_title = $seo_meta_title;
+} else {
+    // Remove an existing WordsCompare suffix to avoid duplication.
+    $seo_meta_title = preg_replace(
+        '/\s*(?:\||-|–|—)\s*' . preg_quote($site_name, '/') . '\s*$/iu',
+        '',
+        $seo_meta_title
+    );
+
+    $title_suffix = ' | ' . $site_name;
+
+    // Keep the complete source title.
+    // Do not cut it arbitrarily at 60 characters.
+    $seo_meta_title = trim($seo_meta_title) . $title_suffix;
+    $seo_social_title = $seo_meta_title;
+}
     $seo_meta_description = trim((string) ($page_description ?? ''));
     if (mb_strlen($seo_meta_description, 'UTF-8') > 160) {
         $seo_meta_description = mb_substr($seo_meta_description, 0, 157, 'UTF-8');

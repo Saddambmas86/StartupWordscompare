@@ -1,10 +1,8 @@
 <?php
-
-$page_title = "QA & Developer Tools";
-$page_description = "Free QA and developer tools for text comparison, JSON formatting, API testing, encoding, and debugging. Validate data and inspect outputs online.";
-$page_keywords = "QA tools, developer tools, JSON formatter, JSON validator, text comparison, API testing tools, debugging tools, WordsCompare";
+$page_title = "Free Online Text, QA, Developer, PDF & Conversion Tools";
+$page_description = "Free online tools for text comparison, QA testing, developers, PDFs, file conversion and calculations. Fast, easy to use, mobile-friendly and no signup required.";
+$page_keywords = "free online tools, text comparison, text compare online, text diff, QA tools, QA testing tools, developer tools, JSON formatter, JSON validator, JSON diff, API testing tools, API tools, debugging tools, PDF tools, PDF converter, file conversion tools, online calculators, WordsCompare";
 include 'includes/header.php';
-
 ?>
 
 
@@ -98,9 +96,8 @@ include 'includes/header.php';
                 <div class="col-lg-6">
                     <div class="hero-copy">
                         <span class="hero-badge">QA &amp; Developer Tools</span>
-                        <h1 class="hero-title">Tools for QA and developers<br>to <span class="gradient-text">debug faster.</span></h1>
+                        <h1 class="hero-title">Tools for Text Comparison, QA and developers<br>to <span class="gradient-text">debug faster.</span></h1>
                         <p class="hero-subtitle">Compare text, validate JSON, inspect API payloads, and streamline everyday release checks with practical browser-based utilities.</p>
-
                         <div class="hero-search-wrap">
                             <button id="global-search-trigger" class="hero-search-btn" type="button" data-wc-search aria-label="Open search (Ctrl/Cmd+K)" aria-expanded="false">
                                 <span class="hero-search-icon"><i class="fas fa-search" aria-hidden="true"></i></span>

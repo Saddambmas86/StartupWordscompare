@@ -96,7 +96,7 @@ include 'includes/header.php';
                 <div class="col-lg-6">
                     <div class="hero-copy">
                         <span class="hero-badge">QA &amp; Developer Tools</span>
-                        <h1 class="hero-title">Tools for Text Comparison, QA and developers<br>to <span class="gradient-text">debug faster.</span></h1>
+                        <h1 class="hero-title">Text Comparison, QA &amp; Developer Tools to <span class="gradient-text">Compare &amp; Debug Faster</span></h1>
                         <p class="hero-subtitle">Compare text, validate JSON, inspect API payloads, and streamline everyday release checks with practical browser-based utilities.</p>
                         <div class="hero-search-wrap">
                             <button id="global-search-trigger" class="hero-search-btn" type="button" data-wc-search aria-label="Open search (Ctrl/Cmd+K)" aria-expanded="false">
@@ -586,262 +586,47 @@ include 'includes/header.php';
             }
         }
     </style>
+    <!-- How It Works -->
+    <section class="py-5 bg-light" aria-labelledby="how-it-works-title">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 id="how-it-works-title">How It Works</h2>
+                <p class="text-muted mb-0">Use WordsCompare tools in four simple steps.</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="h-100 p-4 bg-white rounded-3 shadow-sm">
+                        <div class="mb-3"><i class="fas fa-mouse-pointer fa-2x text-danger" aria-hidden="true"></i></div>
+                        <h3 class="h5">1. Choose a Tool</h3>
+                        <p class="mb-0">Select a text, QA, developer, PDF, converter, or calculator tool.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="h-100 p-4 bg-white rounded-3 shadow-sm">
+                        <div class="mb-3"><i class="fas fa-keyboard fa-2x text-danger" aria-hidden="true"></i></div>
+                        <h3 class="h5">2. Enter or Upload</h3>
+                        <p class="mb-0">Paste your text, enter values, or upload a supported file when required.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="h-100 p-4 bg-white rounded-3 shadow-sm">
+                        <div class="mb-3"><i class="fas fa-cogs fa-2x text-danger" aria-hidden="true"></i></div>
+                        <h3 class="h5">3. Process</h3>
+                        <p class="mb-0">Let the selected tool compare, validate, convert, calculate, or transform your input.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="h-100 p-4 bg-white rounded-3 shadow-sm">
+                        <div class="mb-3"><i class="fas fa-check-circle fa-2x text-danger" aria-hidden="true"></i></div>
+                        <h3 class="h5">4. Get Your Result</h3>
+                        <p class="mb-0">Review your result, then copy, download, or use it as needed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
-
-    <!-- All Tools CTA (SEO + Accessibility optimized) -->
-    <section class="py-5 bg-white">
-        <div class="container px-4">
-            <h2 class="text-center mb-3">How to Use These Tools <span class="text-danger">🛠️</span></h2>
-            <p class="lead text-center text-muted mb-4">
-                Quick, consistent steps to get accurate results from any tool on this site.
-            </p>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <ol class="step-list fs-6">
-                        <li class="mb-3"><strong>Find the right tool:</strong> Browse categories (PDF, Text,
-                            Developer,
-                            Business, Calculators) or use the search bar to quickly locate a tool.</li>
-                        <li class="mb-3"><strong>Open the tool page:</strong> Click the tool card to open its
-                            dedicated
-                            page where inputs and options are provided.</li>
-                        <li class="mb-3"><strong>Read the instructions:</strong> Each tool shows a short instruction
-                            and
-                            sample input. Review any notes about supported file types and limits.</li>
-                        <li class="mb-3"><strong>Provide input:</strong> Paste text or upload files using the
-                            provided
-                            input area. For file uploads, check the maximum file size noted on the tool page.</li>
-                        <li class="mb-3"><strong>Adjust settings:</strong> Select output format, page range,
-                            conversion
-                            options, or other settings as needed.</li>
-                        <li class="mb-3"><strong>Process:</strong> Click the primary action button (Convert /
-                            Generate /
-                            Calculate). Wait for the result — processing happens in your browser for privacy and
-                            speed.
-                        </li>
-                        <li class="mb-3"><strong>Download or copy:</strong> When complete, download the file or copy
-                            the
-                            output text. Use the share buttons if you want to send results to others.</li>
-                        <li class="mb-3"><strong>Clear & repeat:</strong> Clear the input to run another operation
-                            or
-                            try different settings.</li>
-                    </ol>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Structured HowTo for SEO -->
-        <script type="application/ld+json">
- {
- "@context": "https://schema.org",
- "@type": "HowTo",
- "name": "How to use the free online tools",
- "description": "Step-by-step instructions to find, use and download results from the free online tools.",
- "image": "<?php echo $base_url; ?>assets/images/tools-howto.png",
- "totalTime": "PT5M",
- "supply": [],
- "tool": [],
- "step": [
- {"@type":"HowToStep","name":"Find the right tool","text":"Browse categories or search to locate the required tool."},
- {"@type":"HowToStep","name":"Open the tool page","text":"Click the tool card to open its page."},
- {"@type":"HowToStep","name":"Read the instructions","text":"Review input requirements and file limits."},
- {"@type":"HowToStep","name":"Provide input","text":"Paste text or upload files as required."},
- {"@type":"HowToStep","name":"Adjust settings and process","text":"Choose options and click Convert/Generate/Calculate."},
- {"@type":"HowToStep","name":"Download or copy result","text":"Download the output file or copy the result text."}
- ],
- "url": "<?php echo $base_url; ?>all-tools"
- }
- </script>
-    </section>
-
-
-    <!-- Comprehensive Tools Guide Section -->
-    <section class="tools-guide py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Complete Guide to Our Tools <span class="text-danger"></span></h2>
-
-            <div class="row g-4">
-                <!-- PDF Tools Guide -->
-                <div class="col-lg-4 mb-4">
-                    <div class="guide-card p-4 bg-white rounded-3 shadow-sm h-100">
-                        <h3 class="h5 mb-3"><i class="fas fa-file-pdf text-danger me-2"></i>PDF Tools Guide</h3>
-                        <p>Our PDF tools suite offers comprehensive file conversion capabilities. Convert PDFs to
-                            various formats including Word, Excel, PowerPoint, and images. Supports batch
-                            processing,
-                            OCR text extraction, and metadata editing. Perfect for document management and digital
-                            workflows.</p>
-                    </div>
-                </div>
-
-                <!-- Calculator Tools Guide -->
-                <div class="col-lg-4 mb-4">
-                    <div class="guide-card p-4 bg-white rounded-3 shadow-sm h-100">
-                        <h3 class="h5 mb-3"><i class="fas fa-calculator text-success me-2"></i>Financial Calculators
-                        </h3>
-                        <p>Access powerful financial calculators for investment planning, loans, and retirement.
-                            Features include SIP calculator, EMI calculator, PPF calculator, and more. Get accurate
-                            calculations for mutual funds, fixed deposits, and tax planning.</p>
-                    </div>
-                </div>
-
-                <!-- Text Tools Guide -->
-                <div class="col-lg-4 mb-4">
-                    <div class="guide-card p-4 bg-white rounded-3 shadow-sm h-100">
-                        <h3 class="h5 mb-3"><i class="fas fa-font text-primary me-2"></i>Text Manipulation Tools
-                        </h3>
-                        <p>Transform and analyze text with our specialized tools. Count words, convert case, remove
-                            spaces, and generate slugs. Perfect for content creators, writers, and developers
-                            needing
-                            quick text operations.</p>
-                    </div>
-                </div>
-
-                <!-- Developer Tools Guide -->
-                <div class="col-lg-4 mb-4">
-                    <div class="guide-card p-4 bg-white rounded-3 shadow-sm h-100">
-                        <h3 class="h5 mb-3"><i class="fas fa-code text-info me-2"></i>Developer Utilities</h3>
-                        <p>Essential tools for developers including JSON formatter, code beautifier, and syntax
-                            highlighter. Streamline your development workflow with our efficient and reliable
-                            development utilities.</p>
-                    </div>
-                </div>
-
-                <!-- Business Tools Guide -->
-                <div class="col-lg-4 mb-4">
-                    <div class="guide-card p-4 bg-white rounded-3 shadow-sm h-100">
-                        <h3 class="h5 mb-3"><i class="fas fa-briefcase text-warning me-2"></i>Business Tools</h3>
-                        <p>Enhance your business operations with our specialized tools. Generate professional
-                            calendars,
-                            create offer letters, manage payroll sheets, and track employee time. Ideal for HR and
-                            business management.</p>
-                    </div>
-                </div>
-
-                <!-- Web Tools Guide -->
-                <div class="col-lg-4 mb-4">
-                    <div class="guide-card p-4 bg-white rounded-3 shadow-sm h-100">
-                        <h3 class="h5 mb-3"><i class="fas fa-globe text-purple me-2"></i>Web Utilities</h3>
-                        <p>Access essential web tools including password generator, QR code creator, and color
-                            picker.
-                            Perfect for web developers and designers needing quick, reliable online utilities.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tool Usage Tips -->
-            <div class="mt-5 pt-4">
-                <h2 class="mb-4">Pro Tips for Professional Results <span class="emoji">💡</span></h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="p-4 bg-white rounded shadow-sm border-start border-4 border-danger h-100">
-                            <h4 class="h5 mb-3 fw-bold"><i class="fas fa-bolt text-danger me-2"></i>Batch Conversion
-                            </h4>
-                            <p class="text-muted small mb-0">Save time by uploading multiple documents once. Our
-                                cloud-native API processes large batches with 99.9% accuracy.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="p-4 bg-white rounded shadow-sm border-start border-4 border-info h-100">
-                            <h4 class="h5 mb-3 fw-bold"><i class="fas fa-eye text-info me-2"></i>Enable OCR</h4>
-                            <p class="text-muted small mb-0">Converting a scanned image? Toggle the OCR setting to
-                                extract editable text from non-searchable PDFs instantly.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="p-4 bg-white rounded shadow-sm border-start border-4 border-success h-100">
-                            <h4 class="h5 mb-3 fw-bold"><i class="fas fa-table text-success me-2"></i>Smart Data
-                                Extraction</h4>
-                            <p class="text-muted small mb-0">For PDF-to-Excel, our intelligent fallback ensures
-                                layout preservation even for files without formal table structures.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="p-4 bg-white rounded shadow-sm border-start border-4 border-warning h-100">
-                            <h4 class="h5 mb-3 fw-bold"><i class="fas fa-shield-alt text-warning me-2"></i>Privacy
-                                First</h4>
-                            <p class="text-muted small mb-0">All document processing happens securely. Your files
-                                are automatically deleted from our servers immediately after conversion.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="p-4 bg-white rounded shadow-sm border-start border-4 border-primary h-100">
-                            <h4 class="h5 mb-3 fw-bold"><i class="fas fa-keyboard text-primary me-2"></i>Quick
-                                Access</h4>
-                            <p class="text-muted small mb-0">Use the smart search bar (Ctrl+K or Cmd+K) to find any
-                                of our 100+ tools in less than a second.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="p-4 bg-white rounded shadow-sm border-start border-4 border-secondary h-100">
-                            <h4 class="h5 mb-3 fw-bold"><i class="fas fa-mobile-alt text-secondary me-2"></i>Work
-                                from Anywhere</h4>
-                            <p class="text-muted small mb-0">Access all premium tools on your mobile browser. No app
-                                installation required for high-speed PDF tasks.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Features Section -->
-    <section class="tools-section bg-white border-top">
-        <div class="container">
-            <h2 class="mb-5">Why Choose <?php echo $site_name; ?>? <span class="emoji"></span></h2>
-            <div class="row g-3">
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box">
-                        <i class="fas fa-shield-alt text-danger"></i>
-                        <h3>Secure</h3>
-                        <p>Your data stays on your device. We never store anything.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box">
-                        <i class="fas fa-bolt text-danger"></i>
-                        <h3>Fast</h3>
-                        <p>Instant results with optimized processing.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box">
-                        <i class="fas fa-heart text-danger"></i>
-                        <h3>100% Free</h3>
-                        <p>No subscriptions, no hidden costs.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box">
-                        <i class="fas fa-mobile-alt text-danger"></i>
-                        <h3>Mobile Ready</h3>
-                        <p>Works on all devices and screens.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box">
-                        <i class="fas fa-user-tie text-danger"></i>
-                        <h3>No Login</h3>
-                        <p>Start using instantly without registration.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-box">
-                        <i class="fas fa-headset text-danger"></i>
-                        <h3>Support</h3>
-                        <p>Help available 24/7 for all users.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div id="sharer">
-        <?php include 'includes/sharer.php'; ?>
-    </div>
 
     <!-- FAQ Section -->
     <section class="faq-section bg-light">
@@ -854,111 +639,44 @@ include 'includes/header.php';
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-semibold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    <i class="fas fa-lock text-danger me-2"></i> Is my data secure?
+                                    <i class="fas fa-info-circle text-danger me-2"></i> What is WordsCompare?
                                 </button>
                             </h3>
                             <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
-                                <div class="accordion-body">All processing happens in your browser. We never upload
-                                    your
-                                    data to our servers.</div>
+                                <div class="accordion-body">WordsCompare is a collection of practical online tools for text comparison, QA and testing, developers, PDFs, file conversion, and everyday calculations.</div>
                             </div>
                         </div>
                         <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-semibold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    <i class="fas fa-dollar-sign text-danger me-2"></i> Is this really free?
+                                    <i class="fas fa-code-compare text-danger me-2"></i> What is the Text Compare tool used for?
                                 </button>
                             </h3>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
-                                <div class="accordion-body">Yes! All tools are completely free with no usage limits.
-                                </div>
+                                <div class="accordion-body">Text Compare helps you compare two pieces of text and identify differences. It can be useful for reviewing revisions, proofreading, checking copied content, and comparing document versions.</div>
                             </div>
                         </div>
                         <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-semibold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    <i class="fas fa-file-upload text-danger me-2"></i> What's the file size limit?
+                                    <i class="fas fa-vial text-danger me-2"></i> What QA and developer tools are available?
                                 </button>
                             </h3>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
-                                <div class="accordion-body">Most tools support files up to 50MB, depending on your
-                                    device's memory.</div>
+                                <div class="accordion-body">The site includes tools such as JSON formatters and validators, JSON comparison, API utilities, JWT tools, encoders and decoders, regex utilities, and other developer and QA helpers.</div>
                             </div>
                         </div>
                         <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-semibold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    <i class="fas fa-mobile-alt text-danger me-2"></i> Does it work on mobile?
+                                    <i class="fas fa-shield-alt text-danger me-2"></i> Is my data secure?
                                 </button>
                             </h3>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
-                                <div class="accordion-body">Yes! All tools work on smartphones, tablets, and
-                                    computers.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq13">
-                                    <i class="fas fa-image text-danger me-2"></i> Can I convert images to PDF?
-                                </button>
-                            </h3>
-                            <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">Yes, we offer multiple image to PDF conversion tools.
-                                    You
-                                    can convert JPG to PDF, PNG to PDF, WebP to PDF, and even create PDFs from
-                                    multiple
-                                    images. We also have PDF to image converter for the reverse process.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq14">
-                                    <i class="fas fa-code text-danger me-2"></i> Do you have tools for developers?
-                                </button>
-                            </h3>
-                            <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">Absolutely! We have many developer tools including JSON
-                                    formatter, XML formatter, HTML formatter, code minifiers, base64
-                                    encoder/decoder,
-                                    URL encoder/decoder, and more. These tools help developers format, validate, and
-                                    convert code easily.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq15">
-                                    <i class="fas fa-qrcode text-danger me-2"></i> Can I generate QR codes?
-                                </button>
-                            </h3>
-                            <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">Yes, our QR code generator allows you to create QR codes
-                                    for
-                                    URLs, text, contact information, WiFi credentials, and more. You can customize
-                                    the
-                                    size and download the QR code in various formats.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq16">
-                                    <i class="fas fa-globe text-danger me-2"></i> Is WordsCompare available
-                                    worldwide?
-                                </button>
-                            </h3>
-                            <div id="faq16" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">Yes, WordsCompare is accessible from anywhere in the
-                                    world.
-                                    All you need is an internet connection and a web browser. Our tools work
-                                    globally
-                                    and support multiple languages and formats.</div>
+                                <div class="accordion-body">Many text and data tools process input directly in your browser. Some file or document tools may use server-side processing. Check the individual tool page for its processing and privacy details before using sensitive content.</div>
                             </div>
                         </div>
                     </div>
@@ -969,112 +687,44 @@ include 'includes/header.php';
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-semibold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq5">
-                                    <i class="fas fa-cloud text-danger me-2"></i> Do I need an account?
+                                    <i class="fas fa-dollar-sign text-danger me-2"></i> Is WordsCompare free to use?
                                 </button>
                             </h3>
                             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">No accounts needed! Start using immediately without
-                                    registration.</div>
+                                <div class="accordion-body">Most tools are free to use without an account. Individual tools may have file-size, format, feature, or processing limits depending on how they work.</div>
                             </div>
                         </div>
                         <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-semibold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq6">
-                                    <i class="fas fa-globe text-danger me-2"></i> What browsers are supported?
+                                    <i class="fas fa-file-pdf text-danger me-2"></i> What PDF and conversion tools are available?
                                 </button>
                             </h3>
                             <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">All modern browsers including Chrome, Firefox, Safari,
-                                    and
-                                    Edge.</div>
+                                <div class="accordion-body">WordsCompare includes tools for common PDF operations and file conversions, including PDF merging, splitting, compression, PDF-to-document conversion, image-to-PDF conversion, and other formats. Supported formats and processing details are provided on each tool page.</div>
                             </div>
                         </div>
                         <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-semibold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq7">
-                                    <i class="fas fa-history text-danger me-2"></i> Is usage tracked?
+                                    <i class="fas fa-mobile-alt text-danger me-2"></i> Can I use WordsCompare on mobile?
                                 </button>
                             </h3>
                             <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">No, we don't track or store your usage history.</div>
+                                <div class="accordion-body">The website is designed to work across desktop, tablet, and mobile browsers. Individual tools may have different interface or file-processing requirements.</div>
                             </div>
                         </div>
                         <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-semibold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq8">
-                                    <i class="fas fa-question-circle text-danger me-2"></i> How to contact support?
+                                    <i class="fas fa-user-check text-danger me-2"></i> Do I need an account?
                                 </button>
                             </h3>
                             <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">Use our contact form for any questions or issues.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq9">
-                                    <i class="fas fa-file-pdf text-danger me-2"></i> What PDF tools are available?
-                                </button>
-                            </h3>
-                            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">We offer comprehensive PDF tools including PDF to Word
-                                    converter, PDF to Excel converter, PDF to PowerPoint, PDF to image converter,
-                                    image
-                                    to PDF converter, merge PDF, split PDF, compress PDF, and many more. All tools
-                                    work
-                                    directly in your browser.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq10">
-                                    <i class="fas fa-calculator text-danger me-2"></i> What calculators do you
-                                    offer?
-                                </button>
-                            </h3>
-                            <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">Our calculator collection includes EMI calculator, GST
-                                    calculator, BMI calculator, age calculator, loan eligibility calculator,
-                                    investment
-                                    return calculator, compound interest calculator, and many more financial and
-                                    health
-                                    calculators.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq11">
-                                    <i class="fas fa-mobile-alt text-danger me-2"></i> Can I use these tools on my
-                                    phone?
-                                </button>
-                            </h3>
-                            <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">Yes! All our tools are fully responsive and work
-                                    perfectly
-                                    on mobile phones, tablets, and desktop computers. You can access our PDF
-                                    converter,
-                                    calculators, and text utilities from any device with a web browser.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 rounded-3 overflow-hidden shadow-sm mb-3">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq12">
-                                    <i class="fas fa-font text-danger me-2"></i> What text utilities are available?
-                                </button>
-                            </h3>
-                            <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">Our text utilities include word counter, character
-                                    counter,
-                                    case converter, text comparison tool, find and replace, text to slug converter,
-                                    JSON
-                                    formatter, and more. These tools are perfect for writers, editors, and content
-                                    creators.</div>
+                                <div class="accordion-body">Most tools can be used without creating an account. If a particular tool has a different requirement, its tool page should provide the relevant details.</div>
                             </div>
                         </div>
                     </div>
@@ -1083,310 +733,44 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Focused SEO Content Section -->
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <p class="lead mb-4 text-center">WordsCompare provides a comprehensive suite of free online
-                        tools
-                        designed to make your daily tasks easier. From PDF conversion to text analysis, calculators
-                        to
-                        file formatters, our tools are built with simplicity and efficiency in mind.</p>
-
-                    <div class="row text-start mt-5">
-                        <div class="col-md-6 mb-4">
-                            <h5><i class="fas fa-bolt text-warning me-2"></i>Fast & Efficient Processing</h5>
-                            <p>All tools process your data instantly in your browser. No waiting, no queues - get
-                                results immediately. Our client-side processing ensures your files are handled
-                                quickly
-                                without server delays.</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <h5><i class="fas fa-shield-alt text-success me-2"></i>Secure & Private</h5>
-                            <p>Your files never leave your computer. All processing happens locally in your browser
-                                for
-                                maximum privacy and security. We don't store, track, or access your data.</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <h5><i class="fas fa-dollar-sign text-info me-2"></i>Completely Free Forever</h5>
-                            <p>No hidden fees, no subscriptions, no credit cards required. All tools are free to use
-                                without any limitations. Enjoy unlimited access to all our utilities.</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <h5><i class="fas fa-mobile-alt text-primary me-2"></i>Mobile Friendly Design</h5>
-                            <p>Access all tools from any device - desktop, tablet, or smartphone. Our responsive
-                                design
-                                ensures perfect usability across all screen sizes.</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-5">
-                        <h3 class="h4 mb-3">About Our Wordscompare Online Tools</h3>
-                        <p>Looking for a fast and secure online PDF convertor? WordsCompare provides a complete
-                            suite of
-                            PDF tools including PDF converter, PDF merger, JPG to PDF, PDF to image convertor, and
-                            Excel
-                            to PDF convertor — all in one place. No registration required. 100% free and
-                            browser-based.
-                        </p>
-                        <p>WordsCompare is your one-stop destination for free online utilities. Whether you need to
-                            convert PDF documents, calculate financial figures, compare text files, or format code -
-                            we
-                            have the tools you need. Our platform offers over 100 different utilities spanning
-                            multiple
-                            categories including document conversion, text manipulation, mathematical calculations,
-                            and
-                            developer tools.</p>
-                        <p>Each tool is designed with user experience in mind. We prioritize simplicity without
-                            sacrificing functionality. You don't need to create an account, provide personal
-                            information, or download any software. Simply visit our website, select the tool you
-                            need,
-                            and get your work done efficiently.</p>
-                        <p>Our powerful PDF converter allows you to convert documents in seconds. Whether you need
-                            to
-                            convert PDF to Excel, image to PDF, or photo to PDF convertor tools, everything works
-                            directly in your browser for fast and secure processing.</p>
-                        <p>Convert PDF pages into high-quality images using our PDF to image convertor. You can also
-                            use
-                            our online image to PDF convertor or photo to PDF convertor to create professional PDF
-                            documents from JPG or PNG files.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Popular Tools & Features</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded shadow-sm h-100">
-                        <i class="fas fa-file-pdf text-danger fa-2x mb-3"></i>
-                        <h5>PDF Conversion Tools</h5>
-                        <p>Convert PDFs to Word, Excel, PowerPoint, images, and more. Our PDF tools maintain
-                            formatting
-                            and quality while ensuring fast conversion. Support for batch processing and multiple
-                            output
-                            formats.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded shadow-sm h-100">
-                        <i class="fas fa-calculator text-primary fa-2x mb-3"></i>
-                        <h5>Smart Financial Calculators</h5>
-                        <p>Comprehensive financial calculators for EMI, GST, BMI, age, loan eligibility, and more.
-                            Get
-                            accurate results instantly with detailed breakdowns and visual representations of your
-                            calculations.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded shadow-sm h-100">
-                        <i class="fas fa-font text-success fa-2x mb-3"></i>
-                        <h5>Text Utilities & Analysis</h5>
-                        <p>Advanced word counter, case converter, text comparison with diff highlighting, find and
-                            replace, and more tools for text manipulation. Perfect for writers, editors, and content
-                            creators.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded shadow-sm h-100">
-                        <i class="fas fa-image text-warning fa-2x mb-3"></i>
-                        <h5>Image Conversion Tools</h5>
-                        <p>Convert images to PDF, compare images side by side, and access various image processing
-                            utilities. Support for JPG, PNG, WebP, and other popular formats.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded shadow-sm h-100">
-                        <i class="fas fa-code text-info fa-2x mb-3"></i>
-                        <h5>Developer & Code Tools</h5>
-                        <p>JSON formatter, XML formatter, code beautifiers, minifiers, and utilities for developers
-                            and
-                            programmers. Make your coding tasks easier with our specialized tools.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4 bg-white rounded shadow-sm h-100">
-                        <i class="fas fa-qrcode text-secondary fa-2x mb-3"></i>
-                        <h5>QR Code Generator</h5>
-                        <p>Create QR codes instantly for URLs, text, contact information, WiFi credentials, and
-                            more.
-                            Customize size and download in various formats for print or digital use.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <h3 class="h4 mb-3">More Than 100 Free Tools Available</h3>
-                    <p>Our extensive collection includes document converters, data formatters, unit converters,
-                        password
-                        generators, color pickers, and specialized utilities for business, education, and personal
-                        use.
-                        Every tool is designed to be intuitive and efficient, helping you complete tasks quickly
-                        without
-                        any learning curve.</p>
-                    <p>Whether you're a student working on assignments, a professional handling documents, a
-                        developer
-                        writing code, or anyone needing quick utilities - WordsCompare has something for you.
-                        Explore
-                        our categories and discover tools that can save you time and effort every day.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="mb-5">How It Works</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="p-3">
-                        <div class="rounded-circle bg-danger text-white d-inline-flex align-items-center justify-content-center mb-3"
-                            style="width: 60px; height: 60px;">
-                            <i class="fas fa-mouse-pointer fa-lg"></i>
-                        </div>
-                        <h5>1. Select Tool</h5>
-                        <p>Choose from our wide range of free online tools.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-3">
-                        <div class="rounded-circle bg-danger text-white d-inline-flex align-items-center justify-content-center mb-3"
-                            style="width: 60px; height: 60px;">
-                            <i class="fas fa-upload fa-lg"></i>
-                        </div>
-                        <h5>2. Upload/Input</h5>
-                        <p>Upload your file or enter your text/data.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-3">
-                        <div class="rounded-circle bg-danger text-white d-inline-flex align-items-center justify-content-center mb-3"
-                            style="width: 60px; height: 60px;">
-                            <i class="fas fa-cog fa-lg"></i>
-                        </div>
-                        <h5>3. Process</h5>
-                        <p>Our tool processes your data instantly.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-3">
-                        <div class="rounded-circle bg-danger text-white d-inline-flex align-items-center justify-content-center mb-3"
-                            style="width: 60px; height: 60px;">
-                            <i class="fas fa-download fa-lg"></i>
-                        </div>
-                        <h5>4. Download</h5>
-                        <p>Get your results and download instantly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEO Content Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <h2>Free Online PDF Converter and Document Tools</h2>
-                    <p class="lead mb-5">WordsCompare offers the best free online PDF converter tools,
-                        calculators, and utilities to help you work smarter and faster.</p>
+                    <h2 class="text-center mb-4">Text Comparison, QA & Developer Tools</h2>
+                    <p class="lead text-center mb-4">
+                        WordsCompare brings practical tools for comparing text, validating JSON, testing API data,
+                        debugging development output, and handling everyday document and calculation tasks.
+                    </p>
 
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <h4>Comprehensive PDF Conversion Solutions</h4>
-                            <p>Our PDF converter tools are designed to handle all your document conversion needs.
-                                Whether you need to convert PDF to Excel for data analysis, PDF to Word for editing,
-                                or
-                                PDF to PowerPoint for presentations, our tools deliver professional-quality results.
-                                The
-                                PDF to image converter allows you to extract pages as high-quality JPG or PNG files,
-                                while our image to PDF converter helps you create professional documents from
-                                scanned
-                                images or photos.</p>
-                            <p>Business users appreciate our batch processing capabilities and the ability to
-                                maintain
-                                formatting during conversion. Students find our tools invaluable for converting
-                                academic
-                                papers and research documents between different formats. All conversions happen
-                                securely
-                                in your browser, ensuring your sensitive documents remain private.</p>
+                            <h3 class="h5">Text Comparison</h3>
+                            <p>Compare two texts and identify differences quickly. Text Compare is useful for
+                                proofreading, reviewing revisions, checking copied content, and comparing document
+                                versions. Explore related text tools for word counting, case conversion, find and
+                                replace, and text cleanup.</p>
                         </div>
                         <div class="col-md-6">
-                            <h4>Smart Calculators for Every Need</h4>
-                            <p>Our collection of online calculators covers financial, health, and mathematical
-                                calculations. The EMI calculator helps you plan loans by computing equated monthly
-                                installments with detailed amortization schedules. Use our GST calculator to quickly
-                                compute tax amounts for business transactions. The BMI calculator provides instant
-                                health assessments with category classifications.</p>
-                            <p>Financial planning becomes easier with our investment calculators, compound interest
-                                tools, and retirement planners. Business owners benefit from our margin calculator,
-                                discount calculator, and currency converters. Each calculator provides accurate
-                                results
-                                with detailed breakdowns, helping you make informed decisions for personal and
-                                professional use.</p>
-                        </div>
-                    </div>
-
-                    <div class="row g-4 mt-4">
-                        <div class="col-md-6">
-                            <h4>Text Analysis and Content Tools</h4>
-                            <p>Content creators and writers rely on our text utilities for daily tasks. The word
-                                counter
-                                provides detailed statistics including character count, sentence count, and reading
-                                time
-                                estimates. Our case converter transforms text between uppercase, lowercase, title
-                                case,
-                                and sentence case formats instantly. The text comparison tool highlights differences
-                                between two documents, making it perfect for proofreading and version control.</p>
-                            <p>Additional text tools include find and replace functionality, text-to-slug conversion
-                                for
-                                SEO-friendly URLs, and duplicate line removal. Developers appreciate our JSON
-                                formatter
-                                and XML beautifier for cleaning up code. These tools process everything locally in
-                                your
-                                browser, ensuring your content remains confidential and secure.</p>
+                            <h3 class="h5">QA & Developer Workflows</h3>
+                            <p>Use JSON formatters, validators, JSON comparison, API utilities, encoders, JWT tools,
+                                regex utilities, and test-data helpers to inspect and debug everyday QA and development
+                                tasks without installing extra software.</p>
                         </div>
                         <div class="col-md-6">
-                            <h4>Developer and Technical Utilities</h4>
-                            <p>Software developers find essential tools in our platform. Code formatters for HTML,
-                                CSS,
-                                and JavaScript help maintain consistent coding standards. Base64 encoding and
-                                decoding
-                                utilities simplify data transformation tasks. URL encoders ensure special characters
-                                are
-                                properly formatted for web use. The QR code generator creates scannable codes for
-                                websites, contact information, and WiFi credentials.</p>
-                            <p>Our platform also includes color pickers with hex and RGB values, password generators
-                                for
-                                secure credential creation, and unit converters for technical calculations. All
-                                developer tools are designed with simplicity in mind, requiring no installation or
-                                registration. Whether you're debugging code, formatting data, or generating assets,
-                                our
-                                tools streamline your workflow.</p>
+                            <h3 class="h5">PDF, Conversion & Calculator Tools</h3>
+                            <p>Find dedicated tools for common PDF operations, file conversions, and calculations.
+                                Use the relevant category or tool page for detailed instructions, supported formats,
+                                limits, and processing information.</p>
                         </div>
-                    </div>
-
-                    <div class="mt-5">
-                        <h3 class="h4 mb-3">Why Thousands Choose WordsCompare Daily</h3>
-                        <p>WordsCompare has become the preferred destination for free online tools because we
-                            prioritize
-                            user experience, privacy, and reliability. Unlike many online services, we never require
-                            registration or personal information. Our browser-based processing means your files
-                            never
-                            leave your computer, eliminating security concerns associated with cloud uploads.</p>
-                        <p>The platform is continuously updated with new tools based on user feedback and emerging
-                            needs. Our responsive design ensures perfect functionality across desktop computers,
-                            tablets, and smartphones. Whether you need a quick PDF conversion, financial
-                            calculation, or
-                            text analysis, WordsCompare delivers professional results instantly without cost or
-                            complexity.</p>
+                        <div class="col-md-6">
+                            <h3 class="h5">Simple & Accessible</h3>
+                            <p>Most everyday utilities are designed for quick browser-based use with no account
+                                required. Many text and data tools can process input directly in your browser.
+                                Where server-side processing is required, the relevant tool provides the applicable
+                                processing details.</p>
+                        </div>
                     </div>
                 </div>
             </div>

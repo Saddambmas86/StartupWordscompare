@@ -1,3 +1,35 @@
+<?php if (!empty($render_tool_related_sections)): ?>
+    <?php if (!empty($tool_related_items)): ?>
+        <div class="container mb-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-3">
+                    <h2 class="h6 mb-2">Related tools</h2>
+                    <div class="d-flex flex-wrap gap-2">
+                        <?php foreach ($tool_related_items as $related_slug => $related_title): ?>
+                            <a href="<?= htmlspecialchars($base_url . $related_slug, ENT_QUOTES, 'UTF-8') ?>" class="btn btn-sm btn-outline-secondary rounded-pill"><?= htmlspecialchars($related_title) ?></a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <?php if (!empty($tool_related_guides)): ?>
+        <div class="container mb-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-3">
+                    <h2 class="h6 mb-2">Related guides</h2>
+                    <div class="d-flex flex-column gap-2">
+                        <?php foreach ($tool_related_guides as $related_guide_slug => $related_guide_title): ?>
+                            <a href="<?= htmlspecialchars(rtrim($base_url, '/') . '/guides/' . $related_guide_slug, ENT_QUOTES, 'UTF-8') ?>" class="text-decoration-none small"><?= htmlspecialchars($related_guide_title) ?></a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>
+
 <!-- Footer -->
 <footer class="py-5 mt-5 border-top">
     <div class="container">
@@ -63,7 +95,7 @@
 </button>
 
 <!-- Heavy Libraries (Deferred to footer if safe, but here we use Bootstrap only) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
 
 <!-- Dropdown Logic -->
 <script>
@@ -116,7 +148,7 @@
 </script>
 
 <!-- Custom JS -->
-<script src="<?php echo $base_url; ?>assets/js/script.js?v=<?php echo time(); ?>"></script>
+<script src="<?php echo $base_url; ?>assets/js/script.js?v=<?php echo filemtime(__DIR__ . '/../assets/js/script.js'); ?>" defer></script>
 
 </body>
 

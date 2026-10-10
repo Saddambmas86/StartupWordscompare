@@ -1,4 +1,20 @@
 /* Shared application components. Semantic tokens are defined in style.css. */
+@font-face {
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Font Awesome 6 Brands";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2") format("woff2");
+}
+
 body.app-shell {
     background-color: var(--wc-bg);
     color: var(--wc-text-primary);
@@ -567,6 +583,10 @@ body.app-shell > .container > .row > .col-12 > .card[style] {
         background: var(--wc-surface);
         box-shadow: var(--wc-shadow-sm);
     }
+    html[data-bs-theme="dark"] body.app-shell .app-topbar .navbar-collapse {
+        border-color: var(--wc-border) !important;
+        background: var(--wc-surface) !important;
+    }
     body.app-shell .app-topbar .navbar-nav {
         flex-direction: row;
         flex-wrap: wrap;
@@ -582,6 +602,17 @@ body.app-shell > .container > .row > .col-12 > .card[style] {
         border-radius: var(--wc-radius-md);
         font-size: 0.82rem;
         white-space: nowrap;
+    }
+    html[data-bs-theme="dark"] body.app-shell .app-topbar .navbar-nav .nav-link {
+        border: 1px solid var(--wc-border) !important;
+        background: var(--wc-surface) !important;
+        color: var(--wc-text-primary) !important;
+    }
+    html[data-bs-theme="dark"] body.app-shell .app-topbar .navbar-nav .nav-link:hover,
+    html[data-bs-theme="dark"] body.app-shell .app-topbar .navbar-nav .nav-link:focus-visible {
+        border-color: var(--wc-accent) !important;
+        background: var(--wc-surface-raised) !important;
+        color: var(--wc-text-primary) !important;
     }
     body.app-shell .app-topbar .navbar-nav .app-theme-toggle {
         min-width: 2.6rem;

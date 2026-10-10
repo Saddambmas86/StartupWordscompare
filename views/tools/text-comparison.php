@@ -89,6 +89,7 @@ include '../../includes/header.php';
 
     <!-- Comparison Results (shown after compare) -->
     <div id="resultsArea" class="mb-4" style="display: none;">
+        <div id="diffApproximationNotice" class="alert alert-info d-none" role="status"></div>
         <div class="d-flex justify-content-between align-items-center mb-2">
             <h5 class="m-0">Comparison Results</h5>
             <div class="diff-nav">
@@ -435,6 +436,7 @@ include '../../includes/header.php';
         const swapBtn = document.getElementById('swapBtn');
         const clearBtn = document.getElementById('clearBtn');
         const resultsArea = document.getElementById('resultsArea');
+        const diffApproximationNotice = document.getElementById('diffApproximationNotice');
         const comparisonBody = document.getElementById('comparisonBody');
         const prevDiffBtn = document.getElementById('prevDiff');
         const nextDiffBtn = document.getElementById('nextDiff');
@@ -556,31 +558,93 @@ include '../../includes/header.php';
             function getDiff(a, b) {
                 const m = a.length;
                 const n = b.length;
-                const matrix = Array.from({ length: m + 1 }, () => new Int32Array(n + 1));
+                const diff = [];
+                let prefixLength = 0;
+                while (prefixLength < m && prefixLength < n && a[prefixLength] === b[prefixLength]) {
+                    diff.push({ type: 'equal', value1: lines1[prefixLength], value2: lines2[prefixLength], index1: prefixLength, index2: prefixLength });
+                    prefixLength++;
+                }
 
-                for (let i = 1; i <= m; i++) {
-                    for (let j = 1; j <= n; j++) {
-                        if (a[i - 1] === b[j - 1]) {
-                            matrix[i][j] = matrix[i - 1][j - 1] + 1;
-                        } else {
-                            matrix[i][j] = Math.max(matrix[i - 1][j], matrix[i][j - 1]);
+                let suffixLength = 0;
+                while (suffixLength < m - prefixLength && suffixLength < n - prefixLength &&
+                    a[m - suffixLength - 1] === b[n - suffixLength - 1]) {
+                    suffixLength++;
+                }
+
+                const oldMiddleLength = m - prefixLength - suffixLength;
+                const newMiddleLength = n - prefixLength - suffixLength;
+                const maxExactDiffCells = 4000000;
+                const maxExactDiffLines = 10000;
+
+                if (oldMiddleLength * newMiddleLength > maxExactDiffCells ||
+                    Math.max(oldMiddleLength, newMiddleLength) > maxExactDiffLines) {
+                    diff.coarse = true;
+                    for (let i = prefixLength; i < m - suffixLength; i++) {
+                        diff.push({ type: 'remove', value: lines1[i], index: i });
+                    }
+                    for (let j = prefixLength; j < n - suffixLength; j++) {
+                        diff.push({ type: 'add', value: lines2[j], index: j });
+                    }
+                } else if (oldMiddleLength && newMiddleLength) {
+                    // Keep traceback directions in one byte per cell and scores in two rows.
+                    const directions = new Uint8Array(oldMiddleLength * newMiddleLength);
+                    let previous = new Uint32Array(newMiddleLength + 1);
+                    let current = new Uint32Array(newMiddleLength + 1);
+
+                    for (let i = 1; i <= oldMiddleLength; i++) {
+                        current[0] = 0;
+                        const rowOffset = (i - 1) * newMiddleLength;
+                        for (let j = 1; j <= newMiddleLength; j++) {
+                            const cell = rowOffset + j - 1;
+                            if (a[prefixLength + i - 1] === b[prefixLength + j - 1]) {
+                                current[j] = previous[j - 1] + 1;
+                                directions[cell] = 1;
+                            } else if (current[j - 1] >= previous[j]) {
+                                current[j] = current[j - 1];
+                                directions[cell] = 2;
+                            } else {
+                                current[j] = previous[j];
+                                directions[cell] = 3;
+                            }
                         }
+                        [previous, current] = [current, previous];
+                    }
+
+                    const reversedMiddle = [];
+                    let i = oldMiddleLength;
+                    let j = newMiddleLength;
+                    while (i > 0 || j > 0) {
+                        const direction = i > 0 && j > 0 ? directions[(i - 1) * newMiddleLength + j - 1] : 0;
+                        if (i > 0 && j > 0 && direction === 1) {
+                            const oldIndex = prefixLength + i - 1;
+                            const newIndex = prefixLength + j - 1;
+                            reversedMiddle.push({ type: 'equal', value1: lines1[oldIndex], value2: lines2[newIndex], index1: oldIndex, index2: newIndex });
+                            i--;
+                            j--;
+                        } else if (j > 0 && (i === 0 || direction === 2)) {
+                            const newIndex = prefixLength + j - 1;
+                            reversedMiddle.push({ type: 'add', value: lines2[newIndex], index: newIndex });
+                            j--;
+                        } else {
+                            const oldIndex = prefixLength + i - 1;
+                            reversedMiddle.push({ type: 'remove', value: lines1[oldIndex], index: oldIndex });
+                            i--;
+                        }
+                    }
+                    reversedMiddle.reverse().forEach(item => diff.push(item));
+                } else {
+                    for (let i = prefixLength; i < m - suffixLength; i++) {
+                        diff.push({ type: 'remove', value: lines1[i], index: i });
+                    }
+                    for (let j = prefixLength; j < n - suffixLength; j++) {
+                        diff.push({ type: 'add', value: lines2[j], index: j });
                     }
                 }
 
-                const diff = [];
-                let i = m, j = n;
-                while (i > 0 || j > 0) {
-                    if (i > 0 && j > 0 && a[i - 1] === b[j - 1]) {
-                        diff.unshift({ type: 'equal', value1: lines1[i - 1], value2: lines2[j - 1], index1: i - 1, index2: j - 1 });
-                        i--; j--;
-                    } else if (j > 0 && (i === 0 || matrix[i][j - 1] >= matrix[i - 1][j])) {
-                        diff.unshift({ type: 'add', value: lines2[j - 1], index: j - 1 });
-                        j--;
-                    } else {
-                        diff.unshift({ type: 'remove', value: lines1[i - 1], index: i - 1 });
-                        i--;
-                    }
+                for (let offset = 0; offset < suffixLength; offset++) {
+                    const oldIndex = m - suffixLength + offset;
+                    const newIndex = n - suffixLength + offset;
+                    diff.push({ type: 'equal', value1: lines1[oldIndex], value2: lines2[newIndex], index1: oldIndex, index2: newIndex });
                 }
                 return diff;
             }
@@ -615,8 +679,14 @@ include '../../includes/header.php';
             let html = '';
             diffLocations = [];
             let displayIndex = 0;
+            let renderedDiffLimitReached = false;
+            const maxRenderedDiffRows = 3000;
 
             diffResult.forEach((item, i) => {
+                if (i >= maxRenderedDiffRows) {
+                    renderedDiffLimitReached = true;
+                    return;
+                }
                 const hasDiff = item.type !== 'equal';
                 if (hasDiff) {
                     diffLocations.push(displayIndex);
@@ -774,6 +844,11 @@ include '../../includes/header.php';
             });
 
             comparisonBody.innerHTML = html;
+            const showDiffNotice = Boolean(diffResult.coarse || renderedDiffLimitReached);
+            diffApproximationNotice.textContent = renderedDiffLimitReached
+                ? `Showing the first ${maxRenderedDiffRows.toLocaleString()} result rows to keep this page responsive.`
+                : 'This comparison is large, so matching is shown around the changed block rather than line by line.';
+            diffApproximationNotice.classList.toggle('d-none', !showDiffNotice);
 
             // Post-process to add navigation arrows to indicators
             diffLocations.forEach((loc, idx) => {

@@ -595,8 +595,14 @@
 @media (max-width: 767.98px) {
     .home-page-shell .hero-section { padding: 3.2rem 0 2.8rem !important; }
     .home-page-shell .hero-title { font-size: 2.7rem; }
-    .home-page-shell .trust-item { border-right: 0; border-bottom: 1px solid #e5edf2; }
-    .home-page-shell .trust-item:last-child { border-bottom: 0; }
+    .home-page-shell .trust-grid { gap: 0.4rem; padding: 0.25rem; }
+    .home-page-shell .trust-item {
+        border: 1px solid #cbd5e1;
+        border-radius: 12px;
+        background: #ffffff;
+        box-shadow: 0 3px 10px rgba(15, 23, 42, 0.05);
+    }
+    .home-page-shell .trust-item:last-child { border-right: 1px solid #cbd5e1; }
     .home-page-shell .working-section { padding: 2.8rem 0 !important; }
 }
 
@@ -611,6 +617,21 @@
 .home-page-shell .working-card { min-height: 100px; padding: 0.8rem; }
 .home-page-shell .tool-category-section { padding-top: 2.6rem !important; padding-bottom: 2.6rem !important; }
 .home-page-shell .tool-category-section .row { --bs-gutter-y: 0.7rem; }
+
+/* Defer layout and paint for homepage sections that start below the hero. */
+.home-page-content section:not(.hero-section) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 416px;
+}
+
+.home-page-content .trust-strip { contain-intrinsic-size: auto 280px; }
+.home-page-content .working-section { contain-intrinsic-size: auto 500px; }
+.home-page-content :is(.developer-home-section, .qa-api-home-section) { contain-intrinsic-size: auto 380px; }
+.home-page-content .tool-category-section { contain-intrinsic-size: auto 460px; }
+.home-page-content .privacy-section { contain-intrinsic-size: auto 380px; }
+.home-page-content .popular-guides { contain-intrinsic-size: auto 620px; }
+.home-page-content .faq-section,
+.home-page-content section[aria-labelledby="how-it-works-title"] { contain-intrinsic-size: auto 720px; }
 
 .dropdown-divider {
     border-color: #444;

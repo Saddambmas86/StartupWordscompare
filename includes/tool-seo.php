@@ -42,14 +42,9 @@ $parent_category = $wordscompare_categories[$parent_category_key];
     </nav>
 
     <div class="card border-0 shadow-sm mb-4">
-        <div class="card-body p-3 p-md-4 d-flex flex-column flex-md-row align-items-start gap-3">
-            <div class="flex-grow-1">
-                <h1 class="h4 mb-2"><?php echo htmlspecialchars($tool_title); ?></h1>
-                <p class="small text-muted mb-0"><?php echo htmlspecialchars($tool_description_short); ?></p>
-            </div>
-            <div class="text-end">
-                <a href="<?php echo $canonical; ?>" class="btn btn-sm btn-outline-secondary">Permalink</a>
-            </div>
+        <div class="card-body p-3 p-md-4">
+            <h1 class="h4 mb-2"><?php echo htmlspecialchars($tool_title); ?></h1>
+            <p class="small text-muted mb-0"><?php echo htmlspecialchars($tool_description_short); ?></p>
         </div>
     </div>
 </div>
@@ -138,41 +133,10 @@ if (is_dir($guide_dir)) {
     }
 }
 
-// current slug
-$current_slug = $slug;
-
-// ensure link to parent category is present (used in breadcrumb)
-?>
-<div class="container mb-4">
-    <div class="card border-0 shadow-sm">
-        <div class="card-body p-3">
-            <h2 class="h6 mb-2">Related tools</h2>
-            <div class="d-flex flex-wrap gap-2">
-                <?php foreach ($related as $rslug => $rlabel): ?>
-                    <a href="<?php echo $base_url . $rslug; ?>" class="btn btn-sm btn-outline-secondary rounded-pill"><?php echo htmlspecialchars($rlabel); ?></a>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </div>
-</div>
-<?php
-if (!empty($related_guides)): ?>
-<div class="container mb-4">
-    <div class="card border-0 shadow-sm">
-        <div class="card-body p-3">
-            <h2 class="h6 mb-2">Related guides</h2>
-            <div class="d-flex flex-column gap-2">
-                <?php foreach ($related_guides as $gslug => $gtitle): ?>
-                    <?php $gpath = __DIR__ . '/../views/guides/' . $gslug . '.php';
-                    if (!file_exists($gpath)) continue; ?>
-                    <a href="<?php echo rtrim($base_url, '/') . '/guides/' . $gslug; ?>" class="text-decoration-none small"><?php echo htmlspecialchars($gtitle); ?></a>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </div>
-</div>
-<?php
-endif;
+// Preserve the related links for footer.php, which renders them after the tool UI.
+$render_tool_related_sections = true;
+$tool_related_items = $related;
+$tool_related_guides = $related_guides;
 
 // Structured data: basic WebPage schema for the tool
 ?>

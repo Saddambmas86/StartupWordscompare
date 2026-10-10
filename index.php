@@ -6,14 +6,39 @@ include 'includes/header.php';
 ?>
 
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVG71163ZG"></script>
+<!-- Queue analytics immediately, then fetch Google Analytics after the page load. -->
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-ZVG71163ZG');
+
+    (function () {
+        var analyticsLoaded = false;
+        function loadAnalytics() {
+            if (analyticsLoaded) return;
+            analyticsLoaded = true;
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZVG71163ZG';
+            document.head.appendChild(script);
+        }
+        function scheduleAnalytics() {
+            // Preserve queued page-view data while keeping analytics off the critical path.
+            window.setTimeout(function () {
+                if ('requestIdleCallback' in window) {
+                    window.requestIdleCallback(loadAnalytics, { timeout: 2000 });
+                } else {
+                    loadAnalytics();
+                }
+            }, 5000);
+        }
+        if (document.readyState === 'complete') {
+            scheduleAnalytics();
+        } else {
+            window.addEventListener('load', scheduleAnalytics, { once: true });
+        }
+    })();
 </script>
 
 <div class="home-page-ad-layout">

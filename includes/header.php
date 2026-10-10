@@ -7,6 +7,9 @@ if (!isset($brandIcons) && isset($GLOBALS['brandIcons']) && is_array($GLOBALS['b
 }
 
 $request_path_only = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+$current_route_slug = strtolower(basename(rtrim($request_path_only, '/')));
+$base_path_only = parse_url($base_url, PHP_URL_PATH) ?: '/';
+$is_homepage_request = rtrim($request_path_only, '/') === rtrim($base_path_only, '/');
 $guide_route_active = false;
 $guide_slug = '';
 $guide_page_title = '';
@@ -135,22 +138,26 @@ $canonical_to_print) ? $canonical_to_print : ((isset($_SERVER['HTTPS']) && $_SER
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
 
     <!-- Bootstrap CSS (Critical) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Load icon styles without blocking the page's first paint. -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <!-- SweetAlert2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <?php if (!$is_homepage_request): ?>
+        <!-- SweetAlert is not used by the homepage. -->
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <?php endif; ?>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/style.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/style.css'); ?>">
-    <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/homepage.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/homepage.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/homepage.css'); ?>">
     <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/design-system.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/design-system.css'); ?>">
+    <?php if (!$is_homepage_request): ?>
+        <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/share.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/share.css'); ?>">
+    <?php endif; ?>
     
     <style>
         /* Remove dropdown arrows from navigation - Bootstrap 5
@@ -268,12 +275,52 @@ $canonical_to_print) ? $canonical_to_print : ((isset($_SERVER['HTTPS']) && $_SER
         </script>
     <?php endif; ?>
 
-    <!-- Essential Libraries (deferred to improve initial render) -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2923840482782912"
-        crossorigin="anonymous"></script>
+    <!-- Libraries used by tool pages only. -->
+    <?php if (!$is_homepage_request): ?>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <?php endif; ?>
+    <?php
+    // These pages rely on the shared versions; other PDF/XLSX tools load their own versions.
+    $shared_pdfjs_pages = ['pdf-to-csv', 'pdf-to-excel', 'pdf-to-html', 'pdf-to-json', 'pdf-to-jpg', 'pdf-to-webp', 'pdf-to-text', 'pdf-to-png', 'pdf-to-xml'];
+    if (in_array($current_route_slug, $shared_pdfjs_pages, true)):
+    ?>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js" defer></script>
+    <?php endif; ?>
+    <?php if (in_array($current_route_slug, ['pdf-to-csv', 'pdf-to-excel'], true)): ?>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
+    <?php endif; ?>
+    <!-- Keep ads available while allowing the main page content to render first. -->
+    <script>
+        window.adsbygoogle = window.adsbygoogle || [];
+        (function () {
+            var adsScriptUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2923840482782912';
+            var adsScriptLoaded = false;
+            function loadAdsScript() {
+                if (adsScriptLoaded) return;
+                adsScriptLoaded = true;
+                var script = document.createElement('script');
+                script.async = true;
+                script.crossOrigin = 'anonymous';
+                script.src = adsScriptUrl;
+                document.head.appendChild(script);
+            }
+            function scheduleAdsScript() {
+                // Keep third-party ad work outside the initial render and interaction window.
+                window.setTimeout(function () {
+                    if ('requestIdleCallback' in window) {
+                        window.requestIdleCallback(loadAdsScript, { timeout: 2000 });
+                    } else {
+                        loadAdsScript();
+                    }
+                }, 5000);
+            }
+            if (document.readyState === 'complete') {
+                scheduleAdsScript();
+            } else {
+                window.addEventListener('load', scheduleAdsScript, { once: true });
+            }
+        })();
+    </script>
 
 </head>
 
@@ -374,10 +421,7 @@ $canonical_to_print) ? $canonical_to_print : ((isset($_SERVER['HTTPS']) && $_SER
                             <i class="fas fa-envelope me-1"></i>Contact
                         </a>
                     </li>
-                    <?php
-                    $site_root_path = rtrim(parse_url($base_url, PHP_URL_PATH) ?: '/', '/');
-                    if (rtrim($request_path_only, '/') !== $site_root_path):
-                    ?>
+                    <?php if (!$is_homepage_request): ?>
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-wc-search aria-label="Search (Ctrl/Cmd+K)" aria-expanded="false" title="Search">
                                 <i class="fas fa-search me-1" aria-hidden="true"></i>Search
@@ -478,8 +522,8 @@ $canonical_to_print) ? $canonical_to_print : ((isset($_SERVER['HTTPS']) && $_SER
 
     <?php
     // If the current request maps to a tool in views/tools, include a small SEO panel and breadcrumbs.
-    $request_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    $slug = trim($request_path, '/');
+    // Use the final route segment so installs in a subdirectory resolve the same as the live root URL.
+    $slug = $current_route_slug;
     $tool_file = __DIR__ . '/../views/tools/' . $slug . '.php';
     if ($slug && file_exists($tool_file)) {
         include_once __DIR__ . '/tool-seo.php';

@@ -20,15 +20,12 @@
 	ExpiresByType text/html "access plus 1 hour"
 </IfModule>
 
-# # Cache Control Headers
-# <IfModule mod_headers.c>
-#     <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|webp|svg)$">
-#         Header set Cache-Control "max-age=31536000, public"
-#     </FilesMatch>
-#     <FilesMatch "\.(html|htm|php)$">
-#         Header set Cache-Control "max-age=3600, public"
-#     </FilesMatch>
-# </IfModule>
+# Use filemtime query strings on CSS/JS to invalidate long-lived browser cache entries.
+<IfModule mod_headers.c>
+	<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|webp|svg)$">
+		Header set Cache-Control "max-age=31536000, public"
+	</FilesMatch>
+</IfModule>
 
 RewriteEngine On
 
